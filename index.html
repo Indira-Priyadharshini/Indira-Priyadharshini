@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini - Dev Portfolio</title>
+    <title>Indira Priyadharshini | Data & Systems Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
 
@@ -13,9 +13,10 @@
             --surface-card: #111c44;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
-            --primary: #10b981; /* Emerald/Dev Green accent */
+            --primary: #10b981; /* Dev Emerald Green */
             --primary-glow: rgba(16, 185, 129, 0.15);
-            --secondary: #3b82f6; /* Tech Blue */
+            --secondary: #38bdf8; /* Deep Sky Blue */
+            --accent: #818cf8; /* System Indigo */
             --border: rgba(255, 255, 255, 0.05);
         }
 
@@ -37,7 +38,7 @@
             padding: 120px 16px 60px 16px;
         }
 
-        /* Fixed Navigation Header */
+        /* Fixed Navigation Menu */
         nav {
             position: fixed; 
             top: 16px; 
@@ -50,7 +51,7 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border); 
             padding: 14px 24px; 
-            border-radius: 16px; 
+            border-radius: 12px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -93,14 +94,13 @@
             width: 100%; 
         }
 
-        /* Dev Terminal Prompt Header */
+        /* Terminal Execution Header Box */
         .terminal-header {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 32px;
-            position: relative;
         }
 
         .terminal-dots {
@@ -140,7 +140,7 @@
             text-align: justify;
         }
 
-        /* Standardized Component Grid */
+        /* Grid Framework Layout */
         .grid { 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -152,9 +152,6 @@
             border: 1px solid var(--border); 
             border-radius: 16px; 
             padding: 28px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         
         .card h2 { 
@@ -173,7 +170,7 @@
             color: var(--primary);
         }
 
-        /* Tech Tags Matrix layout */
+        /* Modern Dev Tech Boxes */
         .tech-box {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
@@ -201,9 +198,9 @@
         .tag {
             font-family: 'Fira Code', monospace;
             font-size: 0.75rem;
-            background: rgba(59, 130, 246, 0.06);
-            border: 1px solid rgba(59, 130, 246, 0.15);
-            color: #60a5fa;
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            color: var(--secondary);
             padding: 4px 10px;
             border-radius: 6px;
         }
@@ -214,7 +211,7 @@
             color: #34d399;
         }
 
-        /* Dev Timelines */
+        /* Continuous Component Timelines */
         .timeline-wrapper {
             display: flex;
             flex-direction: column;
@@ -268,7 +265,7 @@
             margin-top: 4px;
         }
 
-        /* Dev Project Presentation Cards */
+        /* Projects Section Blocks */
         .dev-project {
             background: var(--surface-card);
             border: 1px solid rgba(255, 255, 255, 0.03);
@@ -306,7 +303,22 @@
             text-align: justify;
         }
 
-        /* Dev-Style Block Buttons */
+        /* Analytical Matrix Environment Graphs Layout */
+        .metrics-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .metrics-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        /* Dev Block Buttons Matrix */
         .links-grid { 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -343,7 +355,7 @@
             font-size: 0.75rem; 
         }
 
-        /* Responsive Breakpoints */
+        /* Media Queries & Responsive Adaptations */
         @media (min-width: 850px) {
             .grid { 
                 grid-template-columns: 1fr 1fr; 
@@ -356,6 +368,7 @@
                 grid-template-columns: repeat(4, 1fr); 
             }
             header h1 { font-size: 3.2rem; }
+            .metrics-block img { width: calc(50% - 8px); }
         }
 
         @media (max-width: 680px) {
@@ -375,6 +388,7 @@
             body {
                 padding-top: 170px;
             }
+            .metrics-block img { width: 100%; }
         }
     </style>
 </head>
@@ -383,80 +397,83 @@
     <nav>
         <a href="#" class="logo">INDIRA<span>://</span></a>
         <ul class="nav-links">
-            <li><a href="#skills">./skills</a></li>
-            <li><a href="#education">./education</a></li>
-            <li><a href="#experience">./experience</a></li>
-            <li><a href="#projects">./projects</a></li>
-            <li><a href="#contact">./contact</a></li>
+            <li><a href="#skills">./capabilities</a></li>
+            <li><a href="#education">./academic</a></li>
+            <li><a href="#experience">./milestones</a></li>
+            <li><a href="#projects">./deployments</a></li>
+            <li><a href="#metrics">./analytics</a></li>
+            <li><a href="#contact">./gateways</a></li>
         </ul>
     </nav>
     
     <div class="container">
         
-        <!-- Terminal Prompt Header Component -->
+        <!-- Interactive Terminal Prompt Frame -->
         <div class="terminal-header">
             <div class="terminal-dots">
                 <span class="dot dot-r"></span>
                 <span class="dot dot-y"></span>
                 <span class="dot dot-g"></span>
             </div>
-            <div class="terminal-prompt">indira-t@portfolio:~$ cat summary.txt</div>
+            <div class="terminal-prompt">indira-priyadharshini-t@kernel:~$ curl -s https://api.profile/objective</div>
             <header>
-                <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
-                <p>Detail-oriented Electrical and Electronics Engineering graduate with 6 months of experience in the banking domain and strong foundational knowledge in Data Analytics. Proficient in SQL, Python, Power BI, and data analysis with hands-on experience in dashboard creation, data cleaning, and generating actionable insights. Seeking an entry-level Data Analyst position to apply analytical skills in a data-driven organization.</p>
+                <h1>Indira Priyadharshini T</h1>
+                <p>An electrical engineering graduate and trained technical specialist with structured domain experience in financial services and advanced data analytics. Proven competency in programmatic data cleaning, relational query execution, and business intelligence reporting. Seeking an entry-level position to design scalable data models and extract actionable business insights.</p>
             </header>
         </div>
 
         <div class="grid">
             
-            <!-- Technical Architecture Blueprint Block -->
+            <!-- Technical Matrix Component -->
             <div class="card" id="skills">
-                <h2>Technical Stack</h2>
+                <h2>Deep Technical Capabilities Matrix</h2>
                 <div class="tech-group-wrapper">
                     <div class="tech-box">
-                        <h3>SQL & Databases</h3>
+                        <h3>Relational Database Systems & Architecture</h3>
                         <div class="tags-wrapper">
-                            <span class="tag db">Query Writing</span>
+                            <span class="tag db">Query Engineering</span>
+                            <span class="tag db">Multi-Table Joins</span>
+                            <span class="tag db">Sub-Queries</span>
+                            <span class="tag db">Grouping / Aggregates</span>
                             <span class="tag db">TCL / DCL</span>
-                            <span class="tag db">Joins & Sub-Queries</span>
-                            <span class="tag db">CRUD Operations</span>
-                            <span class="tag db">RDBMS Concepts</span>
-                            <span class="tag db">Normalization</span>
+                            <span class="tag db">Schema Integrity</span>
+                            <span class="tag db">CRUD Patterns</span>
+                            <span class="tag db">Database Normalization</span>
                         </div>
                     </div>
-                    <div class="tech-box" style="margin-top: 12px;">
-                        <h3>Python Ecosystem</h3>
+                    <div class="tech-box">
+                        <h3>Statistical Computation & Data Analytics</h3>
                         <div class="tags-wrapper">
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">Matplotlib</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">OOPs Concepts</span>
+                            <span class="tag">Programmatic Pipelines</span>
+                            <span class="tag">Python (Pandas, NumPy)</span>
+                            <span class="tag">EDA Execution</span>
+                            <span class="tag">Matplotlib / Seaborn</span>
+                            <span class="tag">OOP Architectures</span>
                             <span class="tag">Exception Handling</span>
                         </div>
                     </div>
-                    <div class="tech-box" style="margin-top: 12px;">
-                        <h3>Analytics & BI</h3>
+                    <div class="tech-box">
+                        <h3>Business Intelligence & Dashboard Architecture</h3>
                         <div class="tags-wrapper">
-                            <span class="tag">Power BI</span>
+                            <span class="tag">Visual Engineering</span>
+                            <span class="tag">Microsoft Power BI</span>
+                            <span class="tag">Data Transformation</span>
                             <span class="tag">Power Query</span>
-                            <span class="tag">Data Visualization</span>
-                            <span class="tag">DAX Measures</span>
-                            <span class="tag">Data Cleaning</span>
+                            <span class="tag">Functional Modeling (DAX)</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Education Block -->
+            <!-- Academic Qualifications Block -->
             <div class="card" id="education">
-                <h2>Academic Framework</h2>
+                <h2>Academic Background</h2>
                 <div class="timeline-wrapper">
                     <div class="timeline-item">
                         <div class="time">2020 – 2024</div>
                         <div class="title-main">B.E. Electrical and Electronics Engineering</div>
                         <div class="sub-main">Alagappa Chettiar Government College of Engineering and Technology, Karaikudi</div>
-                        <div class="desc-main">Graduated with a CGPA of 8.5.</div>
+                        <div class="desc-main">Graduated with an overall CGPA profile of 8.5.</div>
                     </div>
                     <div class="timeline-item">
                         <div class="time">2018 – 2020</div>
@@ -466,9 +483,9 @@
                 </div>
             </div>
 
-            <!-- Professional Experience Block -->
+            <!-- Experience Component -->
             <div class="card" id="experience">
-                <h2>Experience</h2>
+                <h2>Professional Milestones</h2>
                 <div class="timeline-wrapper">
                     <div class="timeline-item">
                         <div class="time">May 2025 – Oct 2025</div>
@@ -476,67 +493,76 @@
                         <div class="sub-main">Bandhan Bank Pvt. Ltd., Pudukkottai</div>
                         <div class="desc-main">
                             <ul>
-                                <li>Processed high-volume daily cash transactions with 100% accuracy.</li>
-                                <li>Maintained and reconciled customer accounts ensuring error-free documentation.</li>
-                                <li>Resolved customer inquiries efficiently, improving customer satisfaction.</li>
-                                <li>Collaborated with team members to meet operational and service targets.</li>
+                                <li>Managed high-volume financial auditing workflows and cash operations with a verified 100% processing accuracy rating.</li>
+                                <li>Supervised, maintained, and cross-examined client ledger records to ensure error-free documentation and operational transparency.</li>
+                                <li>Solved complex client system inquiries under tight SLA guidelines, optimizing regional service delivery targets.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Projects Architecture Block -->
+            <!-- Deployments and Training Block -->
             <div class="card" id="projects">
-                <h2>Repository & Repos</h2>
+                <h2>Technical Deployments</h2>
                 <div class="timeline-wrapper">
                     <div class="timeline-item">
                         <div class="time">Nov 2025 – Present</div>
-                        <div class="title-main">Data Analytics Training</div>
-                        <div class="sub-main">QSpiders</div>
-                        <div class="desc-main">Advanced specialized training linking core database infrastructure querying execution parameters using Python environment structures alongside complete business intelligence layout builds.</div>
+                        <div class="title-main">Advanced Data Analytics Framework</div>
+                        <div class="sub-main">QSpiders Training Institute</div>
+                        <div class="desc-main">Executed systematic training focused on combining Python scripting with underlying SQL engines for advanced pipeline analytics. Designed structural mappings to parse, clean, and consolidate disparate tabular configurations.</div>
                     </div>
                     
                     <div class="dev-project">
                         <div class="project-meta">
-                            <span class="project-title">Pizza Sales Dashboard</span>
+                            <span class="project-title">Pizza Sales Performance Dashboard</span>
                             <span class="project-lang">Power BI / DAX</span>
                         </div>
-                        <p class="project-body">Developed an interactive dashboard to analyze sales performance and customer trends. Created customized high-level DAX measures including Total Revenue and Average Order Value tracking parameters via dynamic interactive charts.</p>
+                        <p class="project-body">Engineered an interactive tracking interface assessing key commercial targets. Authored isolated analytical DAX calculations for core performance parameters such as Total Revenue and Average Order Value ($AOV$).</p>
                     </div>
 
                     <div class="dev-project">
                         <div class="project-meta">
-                            <span class="project-title">Blinkit Sales Dashboard</span>
+                            <span class="project-title">Blinkit Operational Analytics Matrix</span>
                             <span class="project-lang">Power BI / Excel</span>
                         </div>
-                        <p class="project-body">Built an optimization dashboard dashboard tracking metric variables across product performance, outlet targets, and categories filtering calculations accurately using specialized basic functional properties.</p>
+                        <p class="project-body">Configured a dashboard framework monitoring metrics across distinct product groups, fulfillment nodes, and multi-tiered filtering indexes.</p>
                     </div>
 
                     <div class="dev-project">
                         <div class="project-meta">
-                            <span class="project-title">Automatic Sanitary Napkin Incinerator</span>
-                            <span class="project-lang">EEE / Python</span>
+                            <span class="project-title">Automated Sanitary Napkin Incinerator</span>
+                            <span class="project-lang">Python Hardware Integration</span>
                         </div>
-                        <p class="project-body">Designed automated safe health implementation incinerator framework hardware interfaces coding controlling parameters via written system execution scripts in Python.</p>
+                        <p class="project-body">EEE Capstone Project: Designed automated physical safety circuits monitoring continuous hardware loop arrays. Programmed automation processes and operational sensor parameters using custom Python control systems scripts.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Connection & Endpoint Matrix Links -->
+            <!-- Platform Activity Analytics Matrix Block -->
+            <div class="card span-2" id="metrics">
+                <h2>Platform Metrics & Activity Analytics</h2>
+                <p class="desc-main" style="margin-bottom: 12px;">Real-time profile parsing and version control status metrics rendered directly from active developer environments:</p>
+                <div class="metrics-block">
+                    <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="System Activity Overview" />
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=indira-priyadharshini&layout=compact&theme=dark" alt="Language Profiles" />
+                </div>
+            </div>
+
+            <!-- Connection Endpoints Grid -->
             <div class="card span-2" id="contact">
-                <h2>Endpoints & Communication Links</h2>
+                <h2>Verified Professional Gateways</h2>
                 <div class="links-grid">
-                    <a href="mailto:indhuthiruselvam@gmail.com" class="link-item">Email Endpoint</a>
-                    <a href="tel:+919345446812" class="link-item">Phone Endpoint</a>
-                    <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">LinkedIn Link ↗</a>
-                    <a href="https://github.com/" target="_blank" class="link-item">GitHub Link ↗</a>
+                    <a href="mailto:indhuthiruselvam@gmail.com" class="link-item">Secure Mail Endpoint</a>
+                    <a href="tel:+919345446812" class="link-item">Call Connection Line</a>
+                    <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">Enterprise Network Profile ↗</a>
+                    <a href="https://github.com/indira-priyadharshini" target="_blank" class="link-item">Version Control Environment ↗</a>
                 </div>
             </div>
         </div>
 
         <footer>
-            Built with modern layout paradigms // Chennai, Tamil Nadu, India
+            Environment Terminal Layout V2.6 // Chennai, Tamil Nadu, India
         </footer>
     </div>
 </body>
