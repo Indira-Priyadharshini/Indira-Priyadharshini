@@ -86,23 +86,24 @@
         .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
         .link-item:hover { background: #ffffff; color: var(--bg-color); }
 
-        /* Uniform White Box Wrapper for BOTH Desktop and Mobile */
+        /* GUARANTEED SOLID WHITE WRAPPER CARD */
         .stats-box { 
-            background: #ffffff !important; /* Force clean solid white canvas color */
-            padding: 16px; 
-            border-radius: 12px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; 
-            overflow-x: auto; 
-            -webkit-overflow-scrolling: touch;
+            background: #ffffff !important; 
+            padding: 20px !important; 
+            border-radius: 12px !important; 
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important; 
+            min-height: 100px !important;
+            overflow-x: auto !important; 
+            -webkit-overflow-scrolling: touch !important;
         }
         .stats-box img { 
-            height: auto; 
-            max-width: 100%; 
-            min-width: 280px; 
-            display: block; 
+            height: auto !important; 
+            max-width: 100% !important; 
+            min-width: 280px !important; 
+            display: block !important; 
         }
 
         footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
@@ -120,7 +121,7 @@
             .card { padding: 36px; }
             .card h2 { font-size: 1.3rem; }
             .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-            .stats-box img { min-width: auto; }
+            .stats-box img { min-width: auto !important; }
         }
     </style>
 </head>
