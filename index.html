@@ -68,7 +68,9 @@
         .tech-group { margin-bottom: 16px; width: 100%; }
         .tech-group h3 { font-size: 0.85rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; word-wrap: break-word; overflow-wrap: break-word; }
         .tech-group p { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
-        .tech-group ul { color: var(--text-muted); font-size: 0.85rem; padding-left: 16px; margin-top: 4px; }
+
+        .icons-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; }
+        .icon-tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; font-size: 0.75rem; color: #e2e8f0; }
 
         .timeline-item { border-left: 1px solid var(--border); padding-left: 12px; position: relative; margin-bottom: 16px; width: 100%; }
         .timeline-item::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
@@ -76,12 +78,20 @@
         .job-title { font-weight: 600; font-size: 0.95rem; color: #ffffff; margin-top: 2px; }
         .job-sub { font-size: 0.8rem; color: var(--primary); margin-bottom: 4px; }
         .job-desc { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
-        .job-desc ul { padding-left: 16px; margin-top: 4px; }
 
-        /* Flexible Links Layout */
+        /* Flexible Verification Link Layout */
         .links-grid { display: flex; flex-direction: column; gap: 8px; width: 100%; }
         .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
         .link-item:hover { background: #ffffff; color: var(--bg-color); }
+
+        /* GitHub Stats Box Fixing Container */
+        .stats-box { 
+            background: rgba(0,0,0,0.15); border: 1px solid var(--border); padding: 12px; border-radius: 12px; 
+            display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; text-align: left;
+        }
+        .stats-box img { 
+            height: auto; min-width: 450px; max-width: 100%; display: block; margin: 0 auto;
+        }
 
         footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
 
@@ -97,7 +107,9 @@
             .span-2 { grid-column: span 2; }
             .card { padding: 36px; }
             .card h2 { font-size: 1.3rem; }
-            .links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            .stats-box { text-align: center; overflow: hidden; }
+            .stats-box img { min-width: auto; }
         }
     </style>
 </head>
@@ -107,130 +119,41 @@
         <ul class="nav-links">
             <li><a href="#technical-matrix">Technical Matrix</a></li>
             <li><a href="#academic-qualifications">Academic Qualifications</a></li>
-            <li><a href="#professional-experience">Professional Experience</a></li>
-            <li><a href="#projects">Projects & Internships</a></li>
             <li><a href="#professional-channels">Channels</a></li>
         </ul>
     </nav>
     <div class="container">
         <div class="status-badge">
-            <span class="pulse"></span> Actively Seeking Entry-Level Data Analyst Positions
+            <span class="pulse"></span> Actively Seeking Entry-Level Engagements
         </div>
         <header>
             <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
-            <p>Detail-oriented Electrical and Electronics Engineering graduate with 6 months of experience in the banking domain and strong foundational knowledge in Data Analytics. Proficient in SQL, Python, Power BI, and data analysis with hands-on experience in dashboard creation, data cleaning, and generating actionable insights. Seeking an entry-level Data Analyst position to apply analytical skills in a data-driven organization.</p>
-            <a href="#professional-channels" class="vcs-link" style="color: var(--primary); text-decoration: none;">Contact & Connect ↗</a>
+            <p>Detail-oriented graduate equipped with foundational knowledge in software development...</p>
+            <a href="#version-control" class="vcs-link">View Version Control System ↗</a>
         </header>
 
         <div class="grid">
+            <!-- Version Control Card Block -->
+            <div class="card span-2" id="version-control">
+                <h2>Version Control System</h2>
+                <div class="stats-box">
+                    <img src="YOUR_GITHUB_STATS_IMAGE_URL_HERE" alt="VCS Stats">
+                </div>
+            </div>
+
             <!-- Deep Technical Capabilities Matrix -->
             <div class="card" id="technical-matrix">
                 <h2>Technical Capabilities Matrix</h2>
                 <div class="tech-group">
-                    <h3>SQL & Database</h3>
-                    <ul>
-                        <li>Expertise in SQL Query Writing</li>
-                        <li>Proficient in TCL and DCL</li>
-                        <li>Good knowledge in Joins, Sub-Queries and Grouping</li>
-                        <li>Understanding of CRUD Operations (Create, Read, Update, Delete)</li>
-                        <li>Well-versed in RDBMS concepts like Datatypes, Constraints and Normalization</li>
-                    </ul>
+                    <h3>Data Engineering & Statistical Analysis</h3>
+                    <p>Structured implementation of data parsing, cleansing, and manipulation pipelines utilizing Python core libraries including Pandas and NumPy. Competent in exploratory data analysis and statistical reporting using data visualization frameworks such as Matplotlib and Seaborn.</p>
                 </div>
                 <div class="tech-group">
-                    <h3>Data Analytics & Business Intelligence</h3>
-                    <ul>
-                        <li>Data Analysis, Data Cleaning, and Data Validation</li>
-                        <li>Data Visualization for insights</li>
-                        <li>Dashboard development using Microsoft Power BI</li>
-                        <li>Power Query and Basic DAX</li>
-                    </ul>
-                </div>
-                <div class="tech-group">
-                    <h3>Python for Data Analysis</h3>
-                    <ul>
-                        <li>Data analysis, cleaning, and validation using Python (pandas, numpy)</li>
-                        <li>Data visualization with Python (matplotlib, seaborn)</li>
-                        <li>Strong understanding of OOPs concepts, controlling statements and Functions</li>
-                        <li>Exception Handling and Operators</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Academic Qualifications Block -->
-            <div class="card" id="academic-qualifications">
-                <h2>Academic Qualifications</h2>
-                <div class="timeline-item">
-                    <div class="time">2020 – 2024</div>
-                    <div class="job-title">B.E. Electrical and Electronics Engineering</div>
-                    <div class="job-sub">Alagappa Chettiar Government College of Engineering and Technology, Karaikudi</div>
-                    <div class="job-desc">CGPA: 8.5</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2018 – 2020</div>
-                    <div class="job-title">Higher Secondary Certificate (HSC)</div>
-                    <div class="job-sub">Mount Zion Matriculation and Higher Secondary School, Pudukkottai</div>
-                </div>
-            </div>
-
-            <!-- Professional Experience Block -->
-            <div class="card" id="professional-experience">
-                <h2>Professional Experience</h2>
-                <div class="timeline-item">
-                    <div class="time">May 2025 – Oct 2025</div>
-                    <div class="job-title">Bank Teller</div>
-                    <div class="job-sub">Bandhan Bank Pvt. Ltd., Pudukkottai</div>
-                    <div class="job-desc">
-                        <ul>
-                            <li>Processed high-volume daily cash transactions with 100% accuracy.</li>
-                            <li>Maintained and reconciled customer accounts ensuring error-free documentation.</li>
-                            <li>Resolved customer inquiries efficiently, improving customer satisfaction.</li>
-                            <li>Collaborated with team members to meet operational and service targets.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projects & Internships Block -->
-            <div class="card" id="projects">
-                <h2>Projects & Internships</h2>
-                <div class="timeline-item">
-                    <div class="time">Nov 2025 – Present</div>
-                    <div class="job-title">Data Analytics Training</div>
-                    <div class="job-sub">QSpiders</div>
-                    <div class="job-desc">Strong expertise in SQL query writing, joins, sub-queries, and CRUD operations. Skilled in data analysis, cleaning, and validation using Python (pandas, numpy). Completed a Data Analysis course integrating Python with SQL for advanced analytics.</div>
-                </div>
-                
-                <div class="tech-group" style="margin-top: 16px;">
-                    <h3>Pizza Sales Dashboard (Power BI, DAX)</h3>
-                    <p>Developed an interactive dashboard to analyze sales performance and customer trends. Created DAX measures including Total Revenue and Average Order Value. Visualized daily and monthly sales trends using slicers and dynamic charts.</p>
-                </div>
-
-                <div class="tech-group">
-                    <h3>Blinkit Sales Dashboard (Power BI, Excel)</h3>
-                    <p>Built a dashboard to monitor product, category, and outlet performance. Created DAX measures to analyze average sales and product ratings. Enabled interactive analysis using filters and visual insights.</p>
-                </div>
-
-                <div class="tech-group">
-                    <h3>Automatic Sanitary Napkin Incinerator (EEE Project)</h3>
-                    <p>Designed an automated sanitary waste incinerator for safe and hygienic disposal. Developed the control system circuit and implemented automation using Python programming. Tested system performance for safety and reliability.</p>
-                </div>
-            </div>
-
-            <!-- Contact & Connection Channels -->
-            <div class="card span-2" id="professional-channels">
-                <h2>Professional Channels</h2>
-                <div class="links-grid">
-                    <a href="mailto:indhuthiruselvam@gmail.com" class="link-item">Email: indhuthiruselvam@gmail.com</a>
-                    <a href="tel:+919345446812" class="link-item">Phone: +91 9345446812</a>
-                    <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">LinkedIn Profile ↗</a>
-                    <a href="https://github.com/indira-priyadharshini" target="_blank" class="link-item">GitHub Profile ↗</a>
+                    <h3>Database Systems & Query Optimization</h3>
+                    <p>Proficient in relational schema engineering and database development lifecycle using MySQL. Capable of structuring optimized multi-table relational joints, subqueries, and precise constraints verification to maximize data access performance.</p>
                 </div>
             </div>
         </div>
-
-        <footer>
-            Chennai, Tamil Nadu, India
-        </footer>
     </div>
 </body>
 </html>
