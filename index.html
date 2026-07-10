@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini | Data & Systems Portfolio</title>
+    <title>Indira Priyadharshini | Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
 
@@ -94,7 +94,7 @@
             width: 100%; 
         }
 
-        /* Terminal Execution Header Box */
+        /* Interactive Terminal Prompt Frame */
         .terminal-header {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -140,7 +140,7 @@
             text-align: justify;
         }
 
-        /* Grid Framework Layout */
+        /* Layout Framework System */
         .grid { 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -170,7 +170,7 @@
             color: var(--primary);
         }
 
-        /* Modern Dev Tech Boxes */
+        /* Technical Stack Substructures */
         .tech-box {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
@@ -211,7 +211,7 @@
             color: #34d399;
         }
 
-        /* Continuous Component Timelines */
+        /* Timelines and Wrapper Elements */
         .timeline-wrapper {
             display: flex;
             flex-direction: column;
@@ -265,7 +265,7 @@
             margin-top: 4px;
         }
 
-        /* Projects Section Blocks */
+        /* Custom Project Block System */
         .dev-project {
             background: var(--surface-card);
             border: 1px solid rgba(255, 255, 255, 0.03);
@@ -303,10 +303,10 @@
             text-align: justify;
         }
 
-        /* Analytical Matrix Environment Graphs Layout */
+        /* Analytics Integration Modules */
         .metrics-block {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 16px;
             margin-top: 12px;
         }
@@ -318,7 +318,7 @@
             border: 1px solid var(--border);
         }
 
-        /* Dev Block Buttons Matrix */
+        /* Communication Routing Gateways */
         .links-grid { 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -355,7 +355,7 @@
             font-size: 0.75rem; 
         }
 
-        /* Media Queries & Responsive Adaptations */
+        /* Media Elements Breakpoint Grid */
         @media (min-width: 850px) {
             .grid { 
                 grid-template-columns: 1fr 1fr; 
@@ -368,7 +368,12 @@
                 grid-template-columns: repeat(4, 1fr); 
             }
             header h1 { font-size: 3.2rem; }
+            .metrics-block {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
             .metrics-block img { width: calc(50% - 8px); }
+            .metrics-block img.full-width { width: 100%; }
         }
 
         @media (max-width: 680px) {
@@ -388,7 +393,6 @@
             body {
                 padding-top: 170px;
             }
-            .metrics-block img { width: 100%; }
         }
     </style>
 </head>
@@ -415,10 +419,10 @@
                 <span class="dot dot-y"></span>
                 <span class="dot dot-g"></span>
             </div>
-            <div class="terminal-prompt">indira-priyadharshini-t@kernel:~$ curl -s https://api.profile/objective</div>
+            <div class="terminal-prompt">indira-priyadharshini-t@kernel:~$ curl -s https://api.profile/about-me</div>
             <header>
                 <h1>Indira Priyadharshini T</h1>
-                <p>An electrical engineering graduate and trained technical specialist with structured domain experience in financial services and advanced data analytics. Proven competency in programmatic data cleaning, relational query execution, and business intelligence reporting. Seeking an entry-level position to design scalable data models and extract actionable business insights.</p>
+                <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end development. My experience bridges the gap between programmatic engineering metrics and functional business applications.</p>
             </header>
         </div>
 
@@ -429,37 +433,38 @@
                 <h2>Deep Technical Capabilities Matrix</h2>
                 <div class="tech-group-wrapper">
                     <div class="tech-box">
-                        <h3>Relational Database Systems & Architecture</h3>
+                        <h3>Data Analysis & Ecosystem</h3>
                         <div class="tags-wrapper">
-                            <span class="tag db">Query Engineering</span>
-                            <span class="tag db">Multi-Table Joins</span>
-                            <span class="tag db">Sub-Queries</span>
-                            <span class="tag db">Grouping / Aggregates</span>
-                            <span class="tag db">TCL / DCL</span>
-                            <span class="tag db">Schema Integrity</span>
-                            <span class="tag db">CRUD Patterns</span>
-                            <span class="tag db">Database Normalization</span>
+                            <span class="tag db">Python</span>
+                            <span class="tag db">Pandas</span>
+                            <span class="tag db">NumPy</span>
+                            <span class="tag db">Matplotlib</span>
+                            <span class="tag db">Seaborn</span>
+                            <span class="tag db">SQL (Oracle, MySQL)</span>
+                            <span class="tag db">Power BI</span>
+                            <span class="tag db">Excel</span>
                         </div>
                     </div>
                     <div class="tech-box">
-                        <h3>Statistical Computation & Data Analytics</h3>
+                        <h3>Web Development & Engineering</h3>
                         <div class="tags-wrapper">
-                            <span class="tag">Programmatic Pipelines</span>
-                            <span class="tag">Python (Pandas, NumPy)</span>
-                            <span class="tag">EDA Execution</span>
-                            <span class="tag">Matplotlib / Seaborn</span>
-                            <span class="tag">OOP Architectures</span>
-                            <span class="tag">Exception Handling</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Canva</span>
+                            <span class="tag">Responsive Apps</span>
                         </div>
                     </div>
                     <div class="tech-box">
-                        <h3>Business Intelligence & Dashboard Architecture</h3>
+                        <h3>Machine Learning & Infrastructure</h3>
                         <div class="tags-wrapper">
-                            <span class="tag">Visual Engineering</span>
-                            <span class="tag">Microsoft Power BI</span>
-                            <span class="tag">Data Transformation</span>
-                            <span class="tag">Power Query</span>
-                            <span class="tag">Functional Modeling (DAX)</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Predictive Modeling</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Data Pipelines</span>
                         </div>
                     </div>
                 </div>
@@ -473,7 +478,7 @@
                         <div class="time">2020 – 2024</div>
                         <div class="title-main">B.E. Electrical and Electronics Engineering</div>
                         <div class="sub-main">Alagappa Chettiar Government College of Engineering and Technology, Karaikudi</div>
-                        <div class="desc-main">Graduated with an overall CGPA profile of 8.5.</div>
+                        <div class="desc-main">Graduated with an overall CGPA profile of 8.5. Integrates algorithmic automation logic alongside standard electrical framework design parameters.</div>
                     </div>
                     <div class="timeline-item">
                         <div class="time">2018 – 2020</div>
@@ -510,7 +515,7 @@
                         <div class="time">Nov 2025 – Present</div>
                         <div class="title-main">Advanced Data Analytics Framework</div>
                         <div class="sub-main">QSpiders Training Institute</div>
-                        <div class="desc-main">Executed systematic training focused on combining Python scripting with underlying SQL engines for advanced pipeline analytics. Designed structural mappings to parse, clean, and consolidate disparate tabular configurations.</div>
+                        <div class="desc-main">Executed systematic training focused on combining Python scripting with underlying SQL engines for advanced pipeline analytics. Designed structural mappings to parse, clean, and consolidate multi-source tabular configurations.</div>
                     </div>
                     
                     <div class="dev-project">
@@ -544,8 +549,9 @@
                 <h2>Platform Metrics & Activity Analytics</h2>
                 <p class="desc-main" style="margin-bottom: 12px;">Real-time profile parsing and version control status metrics rendered directly from active developer environments:</p>
                 <div class="metrics-block">
-                    <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="System Activity Overview" />
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=indira-priyadharshini&layout=compact&theme=dark" alt="Language Profiles" />
+                    <img src="https://github-readme-stats.shion.dev/api?username=Indira-Priyadharshini&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="System Activity Overview" />
+                    <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=Indira-Priyadharshini&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Language Profiles" />
+                    <img class="full-width" src="https://streak-stats.demolab.com/?user=Indira-Priyadharshini&theme=dark&hide_border=false" alt="Development Streaks Profile" />
                 </div>
             </div>
 
@@ -556,13 +562,13 @@
                     <a href="mailto:indhuthiruselvam@gmail.com" class="link-item">Secure Mail Endpoint</a>
                     <a href="tel:+919345446812" class="link-item">Call Connection Line</a>
                     <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">Enterprise Network Profile ↗</a>
-                    <a href="https://github.com/indira-priyadharshini" target="_blank" class="link-item">Version Control Environment ↗</a>
+                    <a href="https://github.com/Indira-Priyadharshini" target="_blank" class="link-item">Version Control Environment ↗</a>
                 </div>
             </div>
         </div>
 
         <footer>
-            Environment Terminal Layout V2.6 // Chennai, Tamil Nadu, India
+            Environment Terminal Layout V3.0 // Chennai, Tamil Nadu, India
         </footer>
     </div>
 </body>
