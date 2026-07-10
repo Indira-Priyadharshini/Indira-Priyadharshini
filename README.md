@@ -68,6 +68,7 @@ An electrical engineering graduate and trained technical specialist with structu
 
 ---
 
+
 ## 🔗 Verified Professional Gateways
 
 * **Enterprise Network Profile:** [linkedin.com/in/t-indira-priyadharshini-0b29463a8](https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8)
