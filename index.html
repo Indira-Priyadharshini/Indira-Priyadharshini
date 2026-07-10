@@ -86,13 +86,23 @@
         .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
         .link-item:hover { background: #ffffff; color: var(--bg-color); }
 
-        /* GitHub Stats Box Fixing Container */
+        /* Uniform White Box Wrapper for BOTH Desktop and Mobile */
         .stats-box { 
-            background: rgba(0,0,0,0.15); border: 1px solid var(--border); padding: 12px; border-radius: 12px; 
-            display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; text-align: left;
+            background: #ffffff !important; /* Force clean solid white canvas color */
+            padding: 16px; 
+            border-radius: 12px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; 
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
         }
         .stats-box img { 
-            height: auto; min-width: 450px; max-width: 100%; display: block; margin: 0 auto;
+            height: auto; 
+            max-width: 100%; 
+            min-width: 280px; 
+            display: block; 
         }
 
         footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
@@ -110,7 +120,6 @@
             .card { padding: 36px; }
             .card h2 { font-size: 1.3rem; }
             .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-            .stats-box { text-align: center; overflow: hidden; }
             .stats-box img { min-width: auto; }
         }
     </style>
