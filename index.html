@@ -3,355 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini | Portfolio</title>
-    <!-- Premium Geometric Sans-Serif Font Family -->
+    <title>Indira Priyadharshini T | Data Science & Frontend Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/devicon/2.14.0/devicon.min.css">
     <style>
         :root {
-            --bg-color: #070a13;       /* Noxfolio Deep Obsidian Background */
-            --card-bg: #0f1424;       /* Rich Midnight Navy Card Fill */
-            --text-main: #f8fafc;     /* High-Contrast Crisp White */
-            --text-muted: #94a3b8;    /* Soft Slate Secondary Text */
-            --primary: #38bdf8;       /* Glowing Neon Cyan */
-            --accent: #818cf8;        /* Electric Violet Indigo */
+            --bg-color: #070a13;
+            --card-bg: #0f1424;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #818cf8;
             --border: rgba(255, 255, 255, 0.05);
-            --glow: 0 0 40px rgba(56, 189, 248, 0.2);
+            --glow: 0 0 45px rgba(56, 189, 248, 0.25);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 100px 20px;
+            padding: 140px 20px 60px 20px;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Noxfolio Ambient Glowing Backdrop Orbs */
         body::before, body::after {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(140px);
-            z-index: -1;
-            opacity: 0.25;
-            pointer-events: none;
+            content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; filter: blur(150px); z-index: -1; opacity: 0.22; pointer-events: none;
         }
-        body::before {
-            top: -100px;
-            right: -50px;
-            background: var(--primary);
-        }
-        body::after {
-            bottom: 100px;
-            left: -50px;
-            background: var(--accent);
-        }
+        body::before { top: -100px; right: -50px; background: var(--primary); }
+        body::after { bottom: 200px; left: -100px; background: var(--accent); }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 40px); max-width: 1100px;
+            background: rgba(15, 20, 36, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border); padding: 16px 32px; border-radius: 100px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
         }
+        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; font-size: 1.1rem; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
 
-        /* Available Status Badge */
+        .container { max-width: 1100px; margin: 0 auto; }
         .status-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(56, 189, 248, 0.06);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 8px 18px;
-            border-radius: 100px;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 500; padding: 8px 18px; border-radius: 100px; margin-bottom: 28px; letter-spacing: 0.05em;
         }
+        .status-pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary); }
 
-        .status-pulse {
-            width: 6px;
-            height: 6px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary);
-        }
+        header h1 { font-size: 4.2rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; color: #ffffff; margin-bottom: 24px; }
+        .highlight-cyan { background: linear-gradient(135deg, #ffffff 20%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .highlight-violet { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { font-size: 1.25rem; color: var(--text-muted); max-width: 850px; margin-bottom: 44px; }
+        header p strong { color: #ffffff; font-weight: 600; }
 
-        /* Typography and Text Highlights */
-        header h1 {
-            font-size: 3.8rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1.15;
-            color: #ffffff;
-            margin-bottom: 24px;
-        }
-
-        /* Noxfolio Multi-Color Word Highlighting */
-        .highlight-cyan {
-            background: linear-gradient(135deg, #ffffff 20%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .highlight-violet {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 850px;
-            margin-bottom: 40px;
-        }
-
-        header p strong {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        /* Asymmetric Layout Grid */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
+        .portfolio-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 60px; }
         @media (min-width: 850px) {
-            .portfolio-grid {
-                grid-template-columns: 1.4fr 1fr;
-            }
-            .full-width {
-                grid-column: span 2;
-            }
+            .portfolio-grid { grid-template-columns: 1.4fr 1fr; }
+            .full-width { grid-column: span 2; }
         }
 
-        /* Noxfolio Signature Minimalist Cards */
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 45px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 45px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .card:hover { transform: translateY(-6px); border-color: rgba(56, 189, 248, 0.25); box-shadow: var(--glow); }
+        .card h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 32px; color: #ffffff; letter-spacing: -0.02em; }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.3);
-            box-shadow: var(--glow);
-        }
+        .stack-item { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 22px 26px; margin-bottom: 16px; }
+        .stack-item strong { color: var(--primary); display: block; margin-bottom: 6px; font-size: 1.1rem; }
+        .stack-item span { color: var(--text-muted); font-size: 0.95rem; }
 
-        .card h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 28px;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-        }
+        .timeline { position: relative; padding-left: 20px; border-left: 2px solid rgba(255, 255, 255, 0.05); }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before { content: ""; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+        .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); margin-bottom: 4px; text-transform: uppercase; }
+        .timeline-title { font-weight: 700; color: #ffffff; font-size: 1.1rem; }
+        .timeline-desc { color: var(--text-muted); font-size: 0.95rem; margin-top: 4px; }
 
-        /* Stack Content Blocks */
-        .stack-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin-bottom: 16px;
-            transition: border-color 0.3s;
-        }
+        .modern-icon-strip { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+        .icon-box { display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 12px 18px; border-radius: 14px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-muted); transition: all 0.3s ease; }
+        .icon-box i { font-size: 1.3rem; color: #ffffff; }
+        .icon-box:hover { border-color: var(--primary); color: #ffffff; transform: translateY(-2px); }
 
-        .stack-item:hover {
-            border-color: rgba(255, 255, 255, 0.08);
-        }
+        .btn-primary { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #070a13; text-decoration: none; padding: 16px 36px; border-radius: 14px; font-weight: 700; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.5); filter: brightness(1.1); }
 
-        .stack-item strong {
-            color: var(--primary);
-            display: block;
-            margin-bottom: 6px;
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
+        .social-flex { display: flex; flex-direction: column; gap: 14px; }
+        .social-btn { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 16px; text-decoration: none; color: var(--text-main); font-weight: 600; transition: all 0.2s ease; }
+        .social-btn:hover { background: #ffffff; color: #070a13; }
 
-        .stack-item span {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+        .form-group { margin-bottom: 20px; }
+        .form-group input, .form-group textarea { width: 100%; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 16px; border-radius: 12px; color: #ffffff; font-family: inherit; font-size: 0.95rem; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
 
-        /* Focus points bullet structure */
-        .focus-list {
-            list-style: none;
-        }
-
-        .focus-list li {
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
-        .focus-list li::before {
-            content: "//";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-        }
-
-        /* Action Buttons */
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #070a13;
-            text-decoration: none;
-            padding: 16px 36px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.5);
-            filter: brightness(1.1);
-        }
-
-        /* Interactive Social Blocks */
-        .social-flex {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .social-btn {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 24px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .social-btn:hover {
-            background: #ffffff;
-            color: #070a13;
-            border-color: #ffffff;
-        }
-
-        /* Metric Dashboard Badge Alignments */
-        .badge-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 24px;
-        }
-
-        .badge-grid img {
-            height: 32px;
-            border-radius: 6px;
-            transition: transform 0.2s;
-        }
-
-        .badge-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        .stats-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 24px;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-        }
-
-        .stats-wrapper img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 100px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-        }
+        .badge-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .badge-grid img { height: 28px; border-radius: 4px; }
+        .stats-wrapper { display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.2); padding: 24px; border-radius: 18px; border: 1px solid var(--border); }
+        .stats-wrapper img { max-width: 100%; height: auto; }
+        footer { text-align: center; margin-top: 100px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#" class="logo">INDIRA<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="#core-capabilities">Capabilities</a></li>
+        <li><a href="#professional-track">Track</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <div class="container">
     
     <div class="status-pill">
-        <span class="status-pulse"></span> OPEN FOR OFFERS & ROLES
+        <span class="status-pulse"></span> Active & Available for Full-Time Roles
     </div>
 
     <header>
         <h1>Hi, I'm <span class="highlight-cyan">Indira Priyadharshini</span> <span class="highlight-violet">T 👋</span></h1>
-        <p>I am a dedicated <strong>Data Analyst</strong> and <strong>Web Developer</strong> passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative frontend layout frameworks.</p>
-        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Explore GitHub Profile ↗</a>
+        <p>An enterprise-driven <strong>Data Analyst</strong> and <strong>Web Developer</strong> specialized in engineering programmatic data pipelines, applying predictive statistical modeling, and sculpting modern, semantic frontend architectures.</p>
+        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Initialize GitHub Handshake ↗</a>
     </header>
 
     <div class="portfolio-grid">
         
-        <!-- Left Side Dashboard: Tooling Matrix -->
-        <div class="card">
-            <h2>🛠 Technical Toolkit</h2>
+        <!-- Deep Capability Matrix -->
+        <div class="card" id="core-capabilities">
+            <h2>🛠️ Technical Domain & Stack Matrix</h2>
             
             <div class="stack-item">
-                <strong>Data Analysis & Visualization</strong>
-                <span>Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.</span>
+                <strong>Advanced Data Analytics & Pipeline Engineering</strong>
+                <span>Extracting, cleaning, and transforming multi-structured enterprise data pools utilizing high-performance Python operations (Pandas, NumPy) and optimized relational query layers (SQL).</span>
             </div>
             
             <div class="stack-item">
-                <strong>Frontend Web Engineering</strong>
-                <span>HTML, CSS, JavaScript, Responsive Application Architectures.</span>
+                <strong>Interactive Business Intelligence Solutions</strong>
+                <span>Architecting high-fidelity, real-time analytics hubs within Power BI and complex spreadsheet intelligence layers to enable executive data-driven strategy decisions.</span>
             </div>
             
             <div class="stack-item">
-                <strong>Machine Learning Foundations</strong>
-                <span>Scikit-learn (Statistical modeling & predictive data structures).</span>
+                <strong>Responsive Frontend System Engineering</strong>
+                <span>Developing high-performance user interfaces built upon deep semantic HTML5 layouts, advanced CSS grid structures, and asynchronous JavaScript logic.</span>
             </div>
 
-            <!-- Complete Verified Technical Badges Grid Layout -->
-            <div class="badge-grid">
-                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-                <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-                <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-                <img src="https://img.shields.io/badge/oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
+            <div class="modern-icon-strip">
+                <div class="icon-box"><i class="devicon-python-plain"></i> Python</div>
+                <div class="icon-box"><i class="devicon-mysql-plain"></i> MySQL</div>
+                <div class="icon-box"><i class="devicon-html5-plain"></i> HTML5</div>
+                <div class="icon-box"><i class="devicon-css3-plain"></i> CSS3</div>
+                <div class="icon-box"><i class="devicon-javascript-plain"></i> JavaScript</div>
+                <div class="icon-box"><i class="devicon-git-plain"></i> Git</div>
+                <div class="icon-box"><i class="devicon-figma-plain"></i> Figma</div>
+                <div class="icon-box"><i class="devicon-oracle-original"></i> Oracle Frameworks</div>
+            </div>
+
+            <div class="badge-grid" style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 20px;">
                 <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
                 <img src="https://img.shields.io/badge/matplotlib-%23ffffff.svg?style=for-the-badge&logo=matplotlib&logoColor=black" alt="Matplotlib">
                 <img src="https://img.shields.io/badge/seaborn-%234E7297.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
@@ -359,27 +167,31 @@
             </div>
         </div>
 
-        <!-- Right Side Dashboard: Strategic Vectors -->
         <div style="display: flex; flex-direction: column; gap: 30px;">
             
-            <div class="card" style="flex: 1;">
-                <h2>📈 Strategic Objectives</h2>
-                <ul class="focus-list">
-                    <li>Optimizing modular backend data pipelines to extract pristine insights.</li>
-                    <li>Structuring pristine, UI-focused digital interface applications.</li>
-                    <li>Expanding proficiency across mathematical validation architectures.</li>
-                </ul>
+            <!-- Professional Track Target Grid -->
+            <div class="card" style="flex: 1;" id="professional-track">
+                <h2>📈 Professional Specialization</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Core Core Discipline</div>
+                        <div class="timeline-title">Predictive Intelligence & ETL</div>
+                        <div class="timeline-desc">Scaling exploratory analytics and training Scikit-Learn pipelines to synthesize historical platform patterns into metrics.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Engineering Track</div>
+                        <div class="timeline-title">Dynamic UI/UX Architecture</div>
+                        <div class="timeline-desc">Bridging backend data pipelines with fluid layout components for frictionless data accessibility.</div>
+                    </div>
+                </div>
             </div>
 
+            <!-- Global Networks -->
             <div class="card">
                 <h2>🌐 Professional Networks</h2>
                 <div class="social-flex">
                     <a href="https://linkedin.com/in/indira-priyadharshini" target="_blank" class="social-btn">
-                        <span>💼 Connect on LinkedIn</span>
-                        <span>→</span>
-                    </a>
-                    <a href="mailto:indhuthiruselvam@gmail.com" class="social-btn">
-                        <span>✉️ Direct Email Wire</span>
+                        <span>💼 Request Enterprise Connection</span>
                         <span>→</span>
                     </a>
                 </div>
@@ -387,18 +199,35 @@
 
         </div>
 
-        <!-- Lower Panel: Realtime System Profile Metrics -->
+        <!-- Contact Gateway -->
+        <div class="card full-width" id="contact">
+            <h2>✉️ Initiate Strategic Engagement</h2>
+            <form action="#" onsubmit="event.preventDefault();" style="max-width: 600px;">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Corporate Profile Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Business Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Detail your project specifications or candidate search requirements..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Transmit Secure Message ↗</button>
+            </form>
+        </div>
+
+        <!-- Core Production System Health Metrics -->
         <div class="card full-width">
-            <h2>📊 Core Production Metrics</h2>
+            <h2>📊 Production Git Telemetry</h2>
             <div class="stats-wrapper">
-                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="Indira's Development Performance">
+                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="GitHub Operations">
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>// NOXFOLIO INSPIRED DESIGN PROTOCOL FRAMEWORK // 2026</p>
+        <p>// NOXFOLIO ENTERPRISE FRAMEWORK INFRASTRUCTURE // v2.026</p>
     </footer>
 
 </div>
