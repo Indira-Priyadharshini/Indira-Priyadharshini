@@ -1,44 +1,38 @@
-# 🌌 Indira Priyadharshini T | Data Science & Frontend UI Engineer
+# 🌌 Indira Priyadharshini T | Aspiring Data Analyst & Frontend Developer
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Status-Enterprise%20Ready-38bdf8?style=for-the-badge" alt="Status Badge"/>
-  <img src="https://img.shields.io/badge/Focus-Data%20Pipelines%20%26%20UI-818cf8?style=for-the-badge" alt="Focus Badge"/>
+  <img src="https://img.shields.io/badge/Role-Seeking%20Entry--Level-38bdf8?style=for-the-badge" alt="Seeking Role"/>
+  <img src="https://img.shields.io/badge/Focus-Data%20%26%20Frontend%20UI-818cf8?style=for-the-badge" alt="Skill Focus"/>
 </p>
 
-An analytics professional and engineer focused on building robust data transformation systems, implementing mathematical forecasting mechanisms, and delivering performant user interfaces.
+An enthusiastic fresh graduate seeking an entry-level position as a Data Analyst or Web Developer. Ready to apply academic foundations in Python, SQL querying, and responsive frontend design to production environments.
 
 ---
 
-## 🛠️ Specialized Technical Focus
+## 🛠️ Technical Competencies
 
-### 📊 Engineering Data Pipelines & Business Intelligence
-| Ecosystem Component | Core Implementation Domain | Core Competencies |
-| :--- | :--- | :--- |
-| **Python Scripting** | NumPy, Pandas, Seaborn, Matplotlib | Custom ETL Pipelines, Exploratory Analysis |
-| **Relational Management**| MySQL Core, Oracle Architecture Systems | High-performance Query Design & Optimization |
-| **Strategic Metrics** | Power BI Dashboards, Specialized Excel | Executive Data Delivery & Interactive Visuals |
-| **Machine Learning** | Scikit-Learn Frameworks | Predictive Infrastructure & Statistical Modeling |
+### 📊 Data Processing & Analysis
+* **Core Languages:** Python (Pandas, NumPy, Matplotlib, Seaborn)
+* **Database Systems:** SQL (MySQL, Oracle Database)
+* **Reporting & BI Tools:** Power BI, Microsoft Excel
 
-### 🌐 Frontend Engineering & Interaction Layers
-| System Component | Focus Area | Functional Implementation |
-| :--- | :--- | :--- |
-| **Semantic Blueprints** | Modern HTML5 Layout Design | Clean DOM Hierarchies, Accessible Interfaces |
-| **Styling Foundations** | Advanced CSS3 Grid & Flexbox | Responsive Layout Adaptations, Fluid Fluid Components |
-| **Logical Control** | JavaScript Architecture | Asynchronous Data Consumption, UI State Engineering |
-| **Prototyping Engine** | Figma Workspace Design | Architectural Mapping, Functional Mockups |
+### 🌐 Frontend UI Design
+* **Layout Structures:** HTML5, CSS3 (Flexbox & Grid Systems)
+* **Interactions:** Basic JavaScript (ES6)
+* **Wireframing:** Figma
 
 ---
 
-## 📈 Real-Time Production Telemetry
+## 📈 GitHub Learning Analytics
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="GitHub Engine Diagnostics Analytics" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=indira-priyadharshini&layout=compact&theme=dark" alt="Core Language Resource Allocation" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="GitHub Overview Summary" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=indira-priyadharshini&layout=compact&theme=dark" alt="Languages Distribution" width="48%" />
 </p>
 
 ---
 
-## 🔗 Connection Infrastructure
+## 🔗 Connect With Me
 
-* **Enterprise Communication Channel:** [Request Profile Verification on LinkedIn](https://linkedin.com/in/indira-priyadharshini)
-* **Production Repositories:** [Review Architectural Code Repositories](https://github.com/indira-priyadharshini)
+* **Professional Network:** [Connect on LinkedIn](https://linkedin.com/in/indira-priyadharshini)
+* **Source Repositories:** [Review My Codebases on GitHub](https://github.com/indira-priyadharshini)
