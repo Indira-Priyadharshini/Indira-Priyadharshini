@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indira Priyadharshini | Portfolio</title>
-    <!-- Modern Sans-Serif Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Clean Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
+            --bg-gradient: radial-gradient(at 0% 0%, #fdfbf7 0%, #f5f7fa 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
             --text-main: #0f172a;
             --text-muted: #475569;
-            --primary: #0ea5e9; /* Vibrant Sky Blue */
-            --accent: #6366f1;  /* Indigo */
-            --border: #e2e8f0;
+            --primary: #0284c7;      /* Bright Ocean Blue */
+            --accent: #4f46e5;       /* Royal Indigo */
+            --border: rgba(226, 232, 240, 0.8);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            --glow: 0 20px 40px -15px rgba(79, 70, 229, 0.12);
         }
 
         * {
@@ -24,145 +26,257 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 40px 20px;
+            line-height: 1.7;
+            padding: 60px 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Subtle modern grid overlay background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1050px;
             margin: 0 auto;
         }
 
-        /* Top Status Badge */
-        .status-badge {
+        /* Live Status Pill */
+        .status-pill {
             display: inline-flex;
             align-items: center;
-            background-color: #dbeafe;
-            color: #1e40af;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 6px 16px;
-            border-radius: 50px;
-            margin-bottom: 24px;
+            gap: 8px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        /* Hero Section */
-        header {
-            margin-bottom: 40px;
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--primary), var(--accent));
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* Header Intro */
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 16px;
         }
 
-        /* Main Section Cards */
+        header p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin-bottom: 30px;
+        }
+
+        /* Modern Split Grid Layout for Content */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1.4fr 1fr; /* Asymmetric balance layout */
+            }
+            .full-width {
+                grid-column: span 2;
+            }
+        }
+
+        /* Glassmorphism Cards */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+            transform: translateY(-5px);
+            border-color: rgba(79, 70, 229, 0.2);
+            box-shadow: var(--glow);
         }
 
-        h2 {
-            font-size: 1.35rem;
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
             color: var(--text-main);
-            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 8px;
+            gap: 10px;
         }
 
-        p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 16px;
-        }
-
-        /* Tech Stack Sub-lists */
-        .sub-stack {
+        /* Tech Lists */
+        .stack-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 18px;
             margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
         }
 
-        .sub-stack strong {
-            color: var(--text-main);
+        .stack-item strong {
+            color: var(--accent);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .stack-item span {
+            color: var(--text-muted);
             font-size: 0.95rem;
         }
 
-        /* Action Buttons */
-        .cta-btn {
-            display: inline-block;
+        /* Focus points list styling */
+        .focus-list {
+            list-style: none;
+        }
+
+        .focus-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+
+        .focus-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 18px;
+            height: 18px;
+            background: #e0e7ff;
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Primary Call To Action Button */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: opacity 0.2s;
-            margin-top: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+            transition: all 0.2s ease;
         }
 
-        .cta-btn:hover {
-            opacity: 0.9;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+            opacity: 0.95;
         }
 
-        /* Flex wrap for grid-like layouts (socials, badges) */
-        .flex-group {
+        /* Modern Social Buttons */
+        .social-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--text-main);
+            color: #ffffff;
+            border-color: var(--text-main);
+        }
+
+        /* Image Containers */
+        .badge-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 12px;
+            gap: 8px;
+            margin-top: 15px;
         }
 
-        .social-link {
-            display: inline-flex;
+        .badge-grid img {
+            height: 28px;
+            border-radius: 4px;
+        }
+
+        .stats-wrapper {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            padding: 8px 16px;
-            background: var(--bg-color);
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 14px;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s;
         }
 
-        .social-link:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: #f0f9ff;
-        }
-
-        /* Tech Badges styling overrides for light theme visibility */
-        .tech-badges img, .stats-img img {
+        .stats-wrapper img {
             max-width: 100%;
             height: auto;
-            border-radius: 6px;
         }
 
         footer {
             text-align: center;
-            margin-top: 48px;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -172,66 +286,82 @@
 
 <div class="container">
     
-    <div class="status-badge">✨ Available For Projects</div>
+    <div class="status-pill">
+        <span class="status-pulse"></span> Available For Projects
+    </div>
 
     <header>
         <h1>Hi there! I'm Indira Priyadharshini T 👋</h1>
         <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end development.</p>
-        <a href="https://github.com/indira-priyadharshini" target="_blank" class="cta-btn">View GitHub Profile ↗</a>
+        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Explore GitHub Profile ↗</a>
     </header>
 
-    <!-- Tech Stack Card -->
-    <div class="card">
-        <h2>🛠 Tech Stack</h2>
-        <div class="sub-stack">
-            <strong>Data Analysis:</strong> Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.
-        </div>
-        <div class="sub-stack">
-            <strong>Web Development:</strong> HTML, CSS, JavaScript, and UI design.
-        </div>
-        <div class="sub-stack">
-            <strong>Machine Learning:</strong> Scikit-learn (Building predictive models).
-        </div>
+    <div class="portfolio-grid">
         
-        <!-- Visual Badges Section -->
-        <div class="flex-group tech-badges" style="margin-top: 24px;">
-            <!-- Keep your original markdown badge image sources inside <img> tags here -->
-            <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-            <!-- Add the rest of your original badges here -->
-        </div>
-    </div>
+        <!-- Left Side: Tech Stack info -->
+        <div class="card">
+            <h2>🛠 Tech Stack</h2>
+            <div class="stack-item">
+                <strong>Data Analysis</strong>
+                <span>Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.</span>
+            </div>
+            <div class="stack-item">
+                <strong>Web Development</strong>
+                <span>HTML, CSS, JavaScript, and UI design.</span>
+            </div>
+            <div class="stack-item">
+                <strong>Machine Learning</strong>
+                <span>Scikit-learn (Building predictive models).</span>
+            </div>
 
-    <!-- Focus Card -->
-    <div class="card">
-        <h2>📈 Current Focus</h2>
-        <p>🔹 Developing and optimizing data pipelines to extract actionable insights.</p>
-        <p>🔹 Creating functional, responsive web applications with a focus on modern UI/UX design.</p>
-        <p>🔹 Continuously improving my proficiency in end-to-end software development and data analysis.</p>
-    </div>
-
-    <!-- Stats Card -->
-    <div class="card">
-        <h2>📊 GitHub Stats</h2>
-        <div class="stats-img">
-            <!-- Replace with your dynamic GitHub stats card URL -->
-            <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=gotham" alt="GitHub Stats">
+            <!-- GitHub Shield Badges Alignment -->
+            <div class="badge-grid">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+                <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+            </div>
         </div>
-    </div>
 
-    <!-- Socials Card -->
-    <div class="card">
-        <h2>🌐 Connect With Me</h2>
-        <div class="flex-group">
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="social-link">💼 LinkedIn</a>
-            <a href="mailto:YOUR_EMAIL@gmail.com" class="social-link">✉️ Email Me</a>
+        <!-- Right Side: Focus & Social Connections -->
+        <div class="social-column" style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <div class="card" style="flex: 1;">
+                <h2>📈 Current Focus</h2>
+                <ul class="focus-list">
+                    <li>Optimizing core data pipelines to extract actionable insights.</li>
+                    <li>Creating responsive, highly interactive frontend applications.</li>
+                    <li>Improving proficiency in end-to-end full-stack development.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🌐 Connect With Me</h2>
+                <div class="social-flex">
+                    <a href="https://linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank" class="social-btn">
+                        <span>💼</span> LinkedIn Profile
+                    </a>
+                    <a href="mailto:your-email@example.com" class="social-btn">
+                        <span>✉️</span> Send an Email
+                    </a>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Full Width Footer Card: GitHub Metrics -->
+        <div class="card full-width">
+            <h2>📊 GitHub Activity Stats</h2>
+            <div class="stats-wrapper">
+                <!-- Connected dynamic github stats panel -->
+                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=flat" alt="Indira's GitHub Stats">
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>© 2026 Indira Priyadharshini. Built with a clean & modern UI.</p>
+        <p>© 2026 Indira Priyadharshini. Optimized with an elegant, responsive light interface.</p>
     </footer>
 
 </div>
