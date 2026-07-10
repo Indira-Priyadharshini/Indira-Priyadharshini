@@ -244,18 +244,21 @@
     font-weight: 700;
     font-family: 'JetBrains Mono', monospace;
 }
-        /* Responsive fix for Channels section */
-/* Responsive layout for communication channels */
-@media (max-width: 600px) {
+        
+/* Aggressive Mobile Stacking */
+@media screen and (max-width: 600px) {
     .links-flex {
+        display: flex !important;
         flex-direction: column !important;
-        gap: 12px !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
     }
     
     .link-item {
-        width: 100% !important;
-        text-align: center;
-        box-sizing: border-box;
+        width: 90% !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 }
     </style>
