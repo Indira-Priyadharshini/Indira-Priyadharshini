@@ -1,135 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-  body {
-    margin: 0;
-    padding: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #ffffff;
-    background-color: #0b0c10; /* Premium Dark Background */
-    position: relative;
-    min-height: 100vh;
-  }
-
-  /* This creates the beautiful UI glow effects behind your text */
-  body::before, body::after {
-    content: "";
-    position: fixed;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.4;
-    z-index: -1; /* Puts it safely behind your text */
-  }
-
-  /* Top right neon blue glow */
-  body::before {
-    top: -10%;
-    right: -10%;
-    background: #4f46e5; 
-  }
-
-  /* Bottom left neon purple glow */
-  body::after {
-    bottom: -10%;
-    left: -10%;
-    background: #7c3aed;
-  }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indira Priyadharshini | Portfolio</title>
-    <!-- Tailwind CSS for modern styling -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <!-- Modern Sans-Serif Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0b0f19;
-            color: #e2e8f0;
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #0ea5e9; /* Vibrant Sky Blue */
+            --accent: #6366f1;  /* Indigo */
+            --border: #e2e8f0;
         }
-        /* Custom styling to make markdown elements look beautiful in Dark Mode */
-        .prose h1 { color: #f8fafc; font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.5rem; }
-        .prose h2 { color: #38bdf8; font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-        .prose h3 { color: #f1f5f9; font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; }
-        .prose p { color: #94a3b8; line-height: 1.75; margin-bottom: 1rem; }
-        .prose a { color: #38bdf8; text-decoration: none; transition: color 0.2s; }
-        .prose a:hover { color: #7dd3fc; text-decoration: underline; }
-        .prose ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #94a3b8; }
-        .prose li { margin-bottom: 0.5rem; }
-        .prose img { display: inline-block; margin: 0.5rem 0; border-radius: 0.375rem; }
-        /* Smooth glowing glassmorphism effect */
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Top Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #dbeafe;
+            color: #1e40af;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Hero Section */
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        /* Main Section Cards */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        /* Tech Stack Sub-lists */
+        .sub-stack {
+            margin-bottom: 12px;
+        }
+
+        .sub-stack strong {
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        /* Action Buttons */
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+            margin-top: 8px;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Flex wrap for grid-like layouts (socials, badges) */
+        .flex-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: #f0f9ff;
+        }
+
+        /* Tech Badges styling overrides for light theme visibility */
+        .tech-badges img, .stats-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
     </style>
 </head>
-<body class="min-h-screen antialiased selection:bg-sky-500 selection:text-white">
+<body>
 
-    <!-- Decorative background glow blobs -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="container">
+    
+    <div class="status-badge">✨ Available For Projects</div>
 
-    <div class="max-w-4xl mx-auto px-4 py-12 relative z-10">
-        <!-- Header / Brand -->
-        <header class="flex justify-between items-center mb-12 pb-6 border-b border-slate-800">
-            <div class="flex items-center gap-2">
-                <div class="h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></div>
-                <span class="text-sm font-medium tracking-wider text-slate-400 uppercase">Available for Projects</span>
-            </div>
-            <a href="https://github.com/Indira-Priyadharshini" target="_blank" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-full transition font-medium border border-slate-700/50">
-                GitHub Profile ↗
-            </a>
-        </header>
+    <header>
+        <h1>Hi there! I'm Indira Priyadharshini T 👋</h1>
+        <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end development.</p>
+        <a href="https://github.com/indira-priyadharshini" target="_blank" class="cta-btn">View GitHub Profile ↗</a>
+    </header>
 
-        <!-- Main Content Card -->
-        <main class="glass-card rounded-2xl p-8 md:p-12 shadow-2xl shadow-black/40">
-            <div id="content" class="prose max-w-none space-y-4">
-                <!-- Loading State -->
-                <div class="flex flex-col items-center justify-center py-20 space-y-4">
-                    <div class="w-8 h-8 border-4 border-sky-400 border-t-transparent rounded-full animate-spin"></div>
-                    <p class="text-slate-400 text-sm tracking-wide">Assembling your portfolio experience...</p>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="mt-12 text-center text-xs text-slate-500 tracking-wide">
-            &copy; 2026 Indira Priyadharshini. Built dynamically from GitHub.
-        </footer>
+    <!-- Tech Stack Card -->
+    <div class="card">
+        <h2>🛠 Tech Stack</h2>
+        <div class="sub-stack">
+            <strong>Data Analysis:</strong> Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.
+        </div>
+        <div class="sub-stack">
+            <strong>Web Development:</strong> HTML, CSS, JavaScript, and UI design.
+        </div>
+        <div class="sub-stack">
+            <strong>Machine Learning:</strong> Scikit-learn (Building predictive models).
+        </div>
+        
+        <!-- Visual Badges Section -->
+        <div class="flex-group tech-badges" style="margin-top: 24px;">
+            <!-- Keep your original markdown badge image sources inside <img> tags here -->
+            <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+            <!-- Add the rest of your original badges here -->
+        </div>
     </div>
 
-    <!-- Markdown Parser Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        // Configure marked to handle icons/images cleanly
-        marked.setOptions({
-            gfm: true,
-            breaks: true
-        });
+    <!-- Focus Card -->
+    <div class="card">
+        <h2>📈 Current Focus</h2>
+        <p>🔹 Developing and optimizing data pipelines to extract actionable insights.</p>
+        <p>🔹 Creating functional, responsive web applications with a focus on modern UI/UX design.</p>
+        <p>🔹 Continuously improving my proficiency in end-to-end software development and data analysis.</p>
+    </div>
 
-        fetch('README.md')
-            .then(response => response.text())
-            .then(text => {
-                // Parse markdown and inject into the beautiful container
-                document.getElementById('content').innerHTML = marked.parse(text);
-            })
-            .catch(err => {
-                document.getElementById('content').innerHTML = `
-                    <div class="text-center text-red-400 py-10">
-                        <p class="font-semibold">Oops! Failed to load portfolio content.</p>
-                        <p class="text-xs text-slate-500 mt-1">Make sure README.md exists in your repository root.</p>
-                    </div>
-                `;
-            });
-    </script>
+    <!-- Stats Card -->
+    <div class="card">
+        <h2>📊 GitHub Stats</h2>
+        <div class="stats-img">
+            <!-- Replace with your dynamic GitHub stats card URL -->
+            <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=gotham" alt="GitHub Stats">
+        </div>
+    </div>
+
+    <!-- Socials Card -->
+    <div class="card">
+        <h2>🌐 Connect With Me</h2>
+        <div class="flex-group">
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="social-link">💼 LinkedIn</a>
+            <a href="mailto:YOUR_EMAIL@gmail.com" class="social-link">✉️ Email Me</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Indira Priyadharshini. Built with a clean & modern UI.</p>
+    </footer>
+
+</div>
+
 </body>
 </html>
