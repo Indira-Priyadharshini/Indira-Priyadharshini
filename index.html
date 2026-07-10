@@ -3,573 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini | Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
-
+    <title>Indira Priyadharshini T | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/devicon/2.14.0/devicon.min.css">
+  <style>
         :root {
-            --bg: #030712;
-            --surface: #0b1329;
-            --surface-card: #111c44;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --primary: #10b981; /* Dev Emerald Green */
-            --primary-glow: rgba(16, 185, 129, 0.15);
-            --secondary: #38bdf8; /* Deep Sky Blue */
-            --accent: #818cf8; /* System Indigo */
-            --border: rgba(255, 255, 255, 0.05);
+            --bg-color: #0b0f19;
+            --card-bg: #131929;
+            --text-main: #f8fafc;
+            --text-muted: #64748b;
+            --primary: #38bdf8;
+            --accent: #818cf8;
+            --border: rgba(255, 255, 255, 0.04);
         }
 
-        * { 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
+            background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
-            padding: 120px 16px 60px 16px;
+            padding: 180px 12px 40px 12px;
+            overflow-x: hidden;
         }
 
-        /* Fixed Navigation Menu */
+        /* Anti-Spill Responsive Navbar Header */
         nav {
-            position: fixed; 
-            top: 16px; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            width: calc(100% - 32px); 
-            max-width: 1100px;
-            background: rgba(11, 19, 41, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border); 
-            padding: 14px 24px; 
-            border-radius: 12px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            z-index: 1000;
+            position: fixed; top: 12px; left: 50%; transform: translateX(-50%); width: calc(100% - 24px); max-width: 1000px;
+            background: rgba(19, 25, 41, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border); padding: 12px; border-radius: 16px; 
+            display: flex; flex-direction: column; gap: 8px; align-items: center; z-index: 1000;
         }
-        
-        .logo { 
-            font-family: 'Fira Code', monospace;
-            font-weight: 700; 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-size: 1rem; 
-        }
-        
-        .logo span { 
-            color: var(--primary); 
-        }
+        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; font-size: 0.95rem; }
+        .logo span { color: var(--primary); }
         
         .nav-links { 
-            display: flex; 
-            gap: 20px; 
-            list-style: none; 
+            display: flex; gap: 8px 12px; flex-wrap: wrap; justify-content: center; list-style: none; width: 100%; 
         }
-        
+        .nav-links li { display: inline-block; }
         .nav-links a { 
-            font-family: 'Fira Code', monospace;
-            color: var(--text-muted); 
-            text-decoration: none; 
-            font-size: 0.8rem; 
-            transition: color 0.2s; 
+            color: var(--text-muted); text-decoration: none; font-size: 0.75rem; font-weight: 500; transition: color 0.2s; 
+            white-space: normal; text-align: center; display: inline-block;
         }
-        
-        .nav-links a:hover { 
-            color: var(--primary); 
-        }
+        .nav-links a:hover { color: var(--primary); }
 
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
+        .container { max-width: 1000px; margin: 0 auto; width: 100%; }
+        
+        .status-badge {
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.15);
+            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 6px 12px; border-radius: 100px; margin-bottom: 20px; max-width: 100%;
+        }
+        .pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 8px var(--primary); flex-shrink: 0; }
+
+        header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; word-wrap: break-word; overflow-wrap: break-word; }
+        .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { font-size: 0.95rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
+
+        /* Grid Configuration */
+        .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
+
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; transition: transform 0.3s, border-color 0.3s; width: 100%; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word; }
+        .card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.2); }
+        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+        .tech-group { margin-bottom: 16px; width: 100%; }
+        .tech-group h3 { font-size: 0.85rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; word-wrap: break-word; overflow-wrap: break-word; }
+        .tech-group p { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
+
+        .icons-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; }
+        .icon-tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; font-size: 0.75rem; color: #e2e8f0; }
+
+        .timeline-item { border-left: 1px solid var(--border); padding-left: 12px; position: relative; margin-bottom: 16px; width: 100%; }
+        .timeline-item::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+        .time { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); font-weight: bold; }
+        .job-title { font-weight: 600; font-size: 0.95rem; color: #ffffff; margin-top: 2px; }
+        .job-sub { font-size: 0.8rem; color: var(--primary); margin-bottom: 4px; }
+        .job-desc { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
+
+        /* Flexible Verification Link Layout */
+        .links-grid { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+        .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
+        .link-item:hover { background: #ffffff; color: var(--bg-color); }
+
+        /* Clean Version Control Stats Box Layout - Both Mobile and Desktop */
+        .stats-box { 
+            background: #ffffff; 
+            padding: 16px; 
+            border-radius: 12px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%; 
-        }
-
-        /* Interactive Terminal Prompt Frame */
-        .terminal-header {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-
-        .terminal-dots {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-        .dot-r { background: #ef4444; }
-        .dot-y { background: #f59e0b; }
-        .dot-g { background: #10b981; }
-
-        .terminal-prompt {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        header h1 { 
-            font-size: 2.5rem; 
-            font-weight: 800; 
-            letter-spacing: -0.03em; 
-            line-height: 1.2; 
-            margin-bottom: 16px; 
-        }
-        
-        header p { 
-            font-size: 1rem; 
-            color: var(--text-muted); 
-            max-width: 850px; 
-            text-align: justify;
-        }
-
-        /* Layout Framework System */
-        .grid { 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 24px; 
-        }
-
-        .card { 
-            background: var(--surface); 
-            border: 1px solid var(--border); 
-            border-radius: 16px; 
-            padding: 28px; 
-        }
-        
-        .card h2 { 
-            font-family: 'Fira Code', monospace;
-            font-size: 1.15rem; 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-            color: #ffffff; 
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card h2::before {
-            content: ">";
-            color: var(--primary);
-        }
-
-        /* Technical Stack Substructures */
-        .tech-box {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        .tech-box:last-child { margin-bottom: 0; }
-
-        .tech-box h3 {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .tags-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.75rem;
-            background: rgba(56, 189, 248, 0.06);
-            border: 1px solid rgba(56, 189, 248, 0.15);
-            color: var(--secondary);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-
-        .tag.db {
-            background: rgba(16, 185, 129, 0.06);
-            border: 1px solid rgba(16, 185, 129, 0.15);
-            color: #34d399;
-        }
-
-        /* Timelines and Wrapper Elements */
-        .timeline-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .timeline-item { 
-            border-left: 2px solid var(--border); 
-            padding-left: 16px; 
-            position: relative; 
-        }
-        
-        .timeline-item::before { 
-            content: ""; 
-            position: absolute; 
-            left: -6px; 
-            top: 6px; 
-            width: 10px; 
-            height: 10px; 
-            background: var(--primary); 
-            border-radius: 50%; 
-            box-shadow: 0 0 8px var(--primary);
-        }
-        
-        .time { 
-            font-family: 'Fira Code', monospace; 
-            font-size: 0.75rem; 
-            color: var(--text-muted); 
-        }
-        
-        .title-main { 
-            font-weight: 600; 
-            font-size: 1.05rem; 
-            color: #ffffff; 
-        }
-        
-        .sub-main { 
-            font-size: 0.85rem; 
-            color: var(--secondary); 
-            margin-bottom: 6px; 
-        }
-        
-        .desc-main { 
-            color: var(--text-muted); 
-            font-size: 0.85rem; 
-            text-align: justify;
-        }
-        
-        .desc-main ul { 
-            padding-left: 16px; 
-            margin-top: 4px;
-        }
-
-        /* Custom Project Block System */
-        .dev-project {
-            background: var(--surface-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 16px;
-        }
-        .dev-project:last-child { margin-bottom: 0; }
-        
-        .project-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .project-title {
-            font-weight: 700;
-            color: #ffffff;
-            font-size: 0.95rem;
-        }
-
-        .project-lang {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.7rem;
-            color: var(--primary);
-            background: var(--primary-glow);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-
-        .project-body {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            text-align: justify;
-        }
-
-        /* Analytics Integration Modules */
-        .metrics-block {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
             margin-top: 12px;
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
+        }
+        .stats-box img { 
+            height: auto; 
+            max-width: 100%; 
+            min-width: 260px; 
+            display: block; 
         }
 
-        .metrics-block img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
+        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
 
-        /* Communication Routing Gateways */
-        .links-grid { 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 12px; 
-        }
-        
-        .link-item { 
-            font-family: 'Fira Code', monospace;
-            text-align: center; 
-            background: rgba(255, 255, 255, 0.02); 
-            border: 1px solid var(--border); 
-            padding: 12px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            color: #ffffff; 
-            font-size: 0.85rem; 
-            transition: all 0.2s; 
-        }
-        
-        .link-item:hover { 
-            background: transparent; 
-            color: var(--primary); 
-            border-color: var(--primary);
-            box-shadow: 0 0 12px var(--primary-glow);
-        }
-
-        footer { 
-            text-align: center; 
-            margin-top: 60px; 
-            padding-top: 24px; 
-            border-top: 1px solid var(--border); 
-            color: var(--text-muted); 
-            font-family: 'Fira Code', monospace; 
-            font-size: 0.75rem; 
-        }
-
-        /* Media Elements Breakpoint Grid */
-        @media (min-width: 850px) {
-            .grid { 
-                grid-template-columns: 1fr 1fr; 
-                gap: 24px;
-            }
-            .span-2 { 
-                grid-column: span 2; 
-            }
-            .links-grid { 
-                grid-template-columns: repeat(4, 1fr); 
-            }
+        /* Screen upgrades for Tablets & Desktop */
+        @media (min-width: 768px) {
+            body { padding: 120px 24px 60px 24px; }
+            nav { flex-direction: row; justify-content: space-between; padding: 14px 28px; width: calc(100% - 40px); border-radius: 100px; gap: 0; }
+            .logo { font-size: 1.1rem; }
+            .nav-links { width: auto; gap: 24px; }
+            .nav-links a { font-size: 0.9rem; white-space: nowrap; }
             header h1 { font-size: 3.2rem; }
-            .metrics-block {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            .metrics-block img { width: calc(50% - 8px); }
-            .metrics-block img.full-width { width: 100%; }
+            .grid { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+            .span-2 { grid-column: span 2; }
+            .card { padding: 36px; }
+            .card h2 { font-size: 1.3rem; }
+            .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            .stats-box img { min-width: auto; }
+        }
+    </style><style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131929;
+            --text-main: #f8fafc;
+            --text-muted: #64748b;
+            --primary: #38bdf8;
+            --accent: #818cf8;
+            --border: rgba(255, 255, 255, 0.04);
         }
 
-        @media (max-width: 680px) {
-            nav {
-                flex-direction: column;
-                border-radius: 12px;
-                top: 12px;
-                padding: 12px;
-                gap: 12px;
-                width: calc(100% - 24px);
-            }
-            .nav-links {
-                gap: 12px 16px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            body {
-                padding-top: 170px;
-            }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 180px 12px 40px 12px;
+            overflow-x: hidden;
+        }
+
+        /* Anti-Spill Responsive Navbar Header */
+        nav {
+            position: fixed; top: 12px; left: 50%; transform: translateX(-50%); width: calc(100% - 24px); max-width: 1000px;
+            background: rgba(19, 25, 41, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border); padding: 12px; border-radius: 16px; 
+            display: flex; flex-direction: column; gap: 8px; align-items: center; z-index: 1000;
+        }
+        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; font-size: 0.95rem; }
+        .logo span { color: var(--primary); }
+        
+        .nav-links { 
+            display: flex; gap: 8px 12px; flex-wrap: wrap; justify-content: center; list-style: none; width: 100%; 
+        }
+        .nav-links li { display: inline-block; }
+        .nav-links a { 
+            color: var(--text-muted); text-decoration: none; font-size: 0.75rem; font-weight: 500; transition: color 0.2s; 
+            white-space: normal; text-align: center; display: inline-block;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 0 auto; width: 100%; }
+        
+        .status-badge {
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.15);
+            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 6px 12px; border-radius: 100px; margin-bottom: 20px; max-width: 100%;
+        }
+        .pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 8px var(--primary); flex-shrink: 0; }
+
+        header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; word-wrap: break-word; overflow-wrap: break-word; }
+        .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { font-size: 0.95rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
+
+        /* Grid Configuration */
+        .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
+
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; transition: transform 0.3s, border-color 0.3s; width: 100%; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word; }
+        .card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.2); }
+        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+        .tech-group { margin-bottom: 16px; width: 100%; }
+        .tech-group h3 { font-size: 0.85rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; word-wrap: break-word; overflow-wrap: break-word; }
+        .tech-group p { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
+
+        .icons-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; }
+        .icon-tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; font-size: 0.75rem; color: #e2e8f0; }
+
+        .timeline-item { border-left: 1px solid var(--border); padding-left: 12px; position: relative; margin-bottom: 16px; width: 100%; }
+        .timeline-item::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+        .time { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); font-weight: bold; }
+        .job-title { font-weight: 600; font-size: 0.95rem; color: #ffffff; margin-top: 2px; }
+        .job-sub { font-size: 0.8rem; color: var(--primary); margin-bottom: 4px; }
+        .job-desc { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
+
+        /* Flexible Verification Link Layout */
+        .links-grid { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+        .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
+        .link-item:hover { background: #ffffff; color: var(--bg-color); }
+
+        /* GitHub Stats Box Fixing Container */
+        .stats-box { 
+            background: rgba(0,0,0,0.15); border: 1px solid var(--border); padding: 12px; border-radius: 12px; 
+            display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; text-align: left;
+        }
+        .stats-box img { 
+            height: auto; min-width: 450px; max-width: 100%; display: block; margin: 0 auto;
+        }
+
+        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+
+        /* Screen upgrades for Tablets & Desktop */
+        @media (min-width: 768px) {
+            body { padding: 120px 24px 60px 24px; }
+            nav { flex-direction: row; justify-content: space-between; padding: 14px 28px; width: calc(100% - 40px); border-radius: 100px; gap: 0; }
+            .logo { font-size: 1.1rem; }
+            .nav-links { width: auto; gap: 24px; }
+            .nav-links a { font-size: 0.9rem; white-space: nowrap; }
+            header h1 { font-size: 3.2rem; }
+            .grid { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+            .span-2 { grid-column: span 2; }
+            .card { padding: 36px; }
+            .card h2 { font-size: 1.3rem; }
+            .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+            .stats-box { text-align: center; overflow: hidden; }
+            .stats-box img { min-width: auto; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">INDIRA<span>://</span></a>
-        <ul class="nav-links">
-            <li><a href="#skills">./capabilities</a></li>
-            <li><a href="#education">./academic</a></li>
-            <li><a href="#experience">./milestones</a></li>
-            <li><a href="#projects">./deployments</a></li>
-            <li><a href="#metrics">./analytics</a></li>
-            <li><a href="#contact">./gateways</a></li>
-        </ul>
-    </nav>
+<nav>
+    <a href="#" class="logo">INDIRA<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="#technical-matrix">Technical Matrix</a></li>
+        <li><a href="#academic-qualifications">Academic Qualifications</a></li>
+        <li><a href="#professional-channels">Channels</a></li>
+    </ul>
+</nav>
+
+<div class="container">
     
-    <div class="container">
-        
-        <!-- Interactive Terminal Prompt Frame -->
-        <div class="terminal-header">
-            <div class="terminal-dots">
-                <span class="dot dot-r"></span>
-                <span class="dot dot-y"></span>
-                <span class="dot dot-g"></span>
-            </div>
-            <div class="terminal-prompt">indira-priyadharshini-t@kernel:~$ curl -s https://api.profile/about-me</div>
-            <header>
-                <h1>Indira Priyadharshini T</h1>
-                <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end development. My experience bridges the gap between programmatic engineering metrics and functional business applications.</p>
-            </header>
-        </div>
-
-        <div class="grid">
-            
-            <!-- Technical Matrix Component -->
-            <div class="card" id="skills">
-                <h2>Deep Technical Capabilities Matrix</h2>
-                <div class="tech-group-wrapper">
-                    <div class="tech-box">
-                        <h3>Data Analysis & Ecosystem</h3>
-                        <div class="tags-wrapper">
-                            <span class="tag db">Python</span>
-                            <span class="tag db">Pandas</span>
-                            <span class="tag db">NumPy</span>
-                            <span class="tag db">Matplotlib</span>
-                            <span class="tag db">Seaborn</span>
-                            <span class="tag db">SQL (Oracle, MySQL)</span>
-                            <span class="tag db">Power BI</span>
-                            <span class="tag db">Excel</span>
-                        </div>
-                    </div>
-                    <div class="tech-box">
-                        <h3>Web Development & Engineering</h3>
-                        <div class="tags-wrapper">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">UI/UX Design</span>
-                            <span class="tag">Figma</span>
-                            <span class="tag">Canva</span>
-                            <span class="tag">Responsive Apps</span>
-                        </div>
-                    </div>
-                    <div class="tech-box">
-                        <h3>Machine Learning & Infrastructure</h3>
-                        <div class="tags-wrapper">
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Predictive Modeling</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">GitHub</span>
-                            <span class="tag">Data Pipelines</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic Qualifications Block -->
-            <div class="card" id="education">
-                <h2>Academic Background</h2>
-                <div class="timeline-wrapper">
-                    <div class="timeline-item">
-                        <div class="time">2020 – 2024</div>
-                        <div class="title-main">B.E. Electrical and Electronics Engineering</div>
-                        <div class="sub-main">Alagappa Chettiar Government College of Engineering and Technology, Karaikudi</div>
-                        <div class="desc-main">Graduated with an overall CGPA profile of 8.5. Integrates algorithmic automation logic alongside standard electrical framework design parameters.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">2018 – 2020</div>
-                        <div class="title-main">Higher Secondary Certificate (HSC)</div>
-                        <div class="sub-main">Mount Zion Matriculation and Higher Secondary School, Pudukkottai</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Component -->
-            <div class="card" id="experience">
-                <h2>Professional Milestones</h2>
-                <div class="timeline-wrapper">
-                    <div class="timeline-item">
-                        <div class="time">May 2025 – Oct 2025</div>
-                        <div class="title-main">Bank Teller</div>
-                        <div class="sub-main">Bandhan Bank Pvt. Ltd., Pudukkottai</div>
-                        <div class="desc-main">
-                            <ul>
-                                <li>Managed high-volume financial auditing workflows and cash operations with a verified 100% processing accuracy rating.</li>
-                                <li>Supervised, maintained, and cross-examined client ledger records to ensure error-free documentation and operational transparency.</li>
-                                <li>Solved complex client system inquiries under tight SLA guidelines, optimizing regional service delivery targets.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deployments and Training Block -->
-            <div class="card" id="projects">
-                <h2>Technical Deployments</h2>
-                <div class="timeline-wrapper">
-                    <div class="timeline-item">
-                        <div class="time">Nov 2025 – Present</div>
-                        <div class="title-main">Advanced Data Analytics Framework</div>
-                        <div class="sub-main">QSpiders Training Institute</div>
-                        <div class="desc-main">Executed systematic training focused on combining Python scripting with underlying SQL engines for advanced pipeline analytics. Designed structural mappings to parse, clean, and consolidate multi-source tabular configurations.</div>
-                    </div>
-                    
-                    <div class="dev-project">
-                        <div class="project-meta">
-                            <span class="project-title">Pizza Sales Performance Dashboard</span>
-                            <span class="project-lang">Power BI / DAX</span>
-                        </div>
-                        <p class="project-body">Engineered an interactive tracking interface assessing key commercial targets. Authored isolated analytical DAX calculations for core performance parameters such as Total Revenue and Average Order Value ($AOV$).</p>
-                    </div>
-
-                    <div class="dev-project">
-                        <div class="project-meta">
-                            <span class="project-title">Blinkit Operational Analytics Matrix</span>
-                            <span class="project-lang">Power BI / Excel</span>
-                        </div>
-                        <p class="project-body">Configured a dashboard framework monitoring metrics across distinct product groups, fulfillment nodes, and multi-tiered filtering indexes.</p>
-                    </div>
-
-                    <div class="dev-project">
-                        <div class="project-meta">
-                            <span class="project-title">Automated Sanitary Napkin Incinerator</span>
-                            <span class="project-lang">Python Hardware Integration</span>
-                        </div>
-                        <p class="project-body">EEE Capstone Project: Designed automated physical safety circuits monitoring continuous hardware loop arrays. Programmed automation processes and operational sensor parameters using custom Python control systems scripts.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Platform Activity Analytics Matrix Block -->
-            <div class="card span-2" id="metrics">
-                <h2>Platform Metrics & Activity Analytics</h2>
-                <p class="desc-main" style="margin-bottom: 12px;">Real-time profile parsing and version control status metrics rendered directly from active developer environments:</p>
-                <div class="metrics-block">
-                    <img src="https://github-readme-stats.shion.dev/api?username=Indira-Priyadharshini&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="System Activity Overview" />
-                    <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=Indira-Priyadharshini&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Language Profiles" />
-                    <img class="full-width" src="https://streak-stats.demolab.com/?user=Indira-Priyadharshini&theme=dark&hide_border=false" alt="Development Streaks Profile" />
-                </div>
-            </div>
-
-            <!-- Connection Endpoints Grid -->
-            <div class="card span-2" id="contact">
-                <h2>Verified Professional Gateways</h2>
-                <div class="links-grid">
-                    <a href="mailto:indhuthiruselvam@gmail.com" class="link-item">Secure Mail Endpoint</a>
-                    <a href="tel:+919345446812" class="link-item">Call Connection Line</a>
-                    <a href="https://linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">Enterprise Network Profile ↗</a>
-                    <a href="https://github.com/Indira-Priyadharshini" target="_blank" class="link-item">Version Control Environment ↗</a>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            Environment Terminal Layout V3.0 // Chennai, Tamil Nadu, India
-        </footer>
+    <div class="status-badge">
+        <span class="pulse"></span> Actively Seeking Entry-Level Engagements
     </div>
+
+    <header>
+        <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
+        <p>Detail-oriented graduate equipped with foundational knowledge in data analytics and web development. Proficient in executing data profiling, statistical modeling, relational database query management, and designing performant, cross-browser compliant presentation layers using standard web technologies.</p>
+        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn">View Version Control System ↗</a>
+    </header>
+
+    <div class="grid">
+        <!-- Version Control Card Block -->
+        <div class="card span-2">
+            <h2>Version Control System</h2>
+            <div class="stats-box">
+                <img id="vcs-stats-img" src="YOUR_GITHUB_STATS_IMAGE_URL_HERE" alt="VCS Stats">
+            </div>
+        </div>
+        <!-- Deep Technical Capabilities Matrix -->
+        <div class="card" id="technical-matrix">
+            <h2>Technical Capabilities Matrix</h2>
+            
+            <div class="tech-group">
+                <h3>Data Engineering & Statistical Analysis</h3>
+                <p>Structured implementation of data parsing, cleansing, and manipulation pipelines utilizing Python core libraries including Pandas and NumPy. Competent in exploratory data analysis and statistical reporting using data visualization frameworks such as Matplotlib and Seaborn.</p>
+            </div>
+
+            <div class="tech-group">
+                <h3>Relational Database Architecture</h3>
+                <p>Writing and evaluating standardized relational database requests within MySQL and Oracle Database environments. Foundational understanding of data normalization, schema creation, transactional control statements, and standard indexing methodologies.</p>
+            </div>
+            
+            <div class="tech-group">
+                <h3>Semantic Presentation Layers</h3>
+                <p>Developing responsive, mobile-first web pages utilizing semantic HTML5 markup structures and advanced CSS3 layout methodologies (Flexbox and Grid systems). Functional understanding of script performance using basic asynchronous JavaScript paradigms and user flow UI prototyping inside Figma.</p>
+            </div>
+
+            <div class="icons-grid">
+                <div class="icon-tag"><i class="devicon-python-plain"></i> Python</div>
+                <div class="icon-tag"><i class="devicon-mysql-plain"></i> MySQL</div>
+                <div class="icon-tag"><i class="devicon-html5-plain"></i> HTML5</div>
+                <div class="icon-tag"><i class="devicon-css3-plain"></i> CSS3</div>
+                <div class="icon-tag"><i class="devicon-javascript-plain"></i> JavaScript</div>
+                <div class="icon-tag"><i class="devicon-oracle-original"></i> Oracle</div>
+            </div>
+        </div>
+
+        <!-- Rigorous Education and Training History -->
+        <div class="card" id="academic-qualifications">
+            <h2>Education & Technical Preparation</h2>
+            
+            <div class="timeline-item">
+                <div class="time">Academic Framework</div>
+                <div class="job-title">Exploratory Data Analysis Implementations</div>
+                <div class="job-desc">Constructing programmatic code to automate the ingestion of raw tabular datasets, handle structural missing values, neutralize outliers, and build interactive visualization graphs to identify statistical trends.</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">Development Track</div>
+                <div class="job-title">Responsive UI Engineering Layouts</div>
+                <div class="job-desc">Designing fluid user interfaces matching modern responsive breakpoints, engineering semantic structural components for accessibility, and converting design prototypes into production-ready web assets.</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">Database Track</div>
+                <div class="job-title">Relational Query Optimization</div>
+                <div class="job-desc">Structuring foundational entity-relationship schemas, writing performance-focused relational queries, and validating data integrity constraints across testing databases.</div>
+            </div>
+        </div>
+
+        <!-- Verified Communication Channels (No Forms) -->
+        <div class="card span-2" id="professional-channels">
+            <h2>Verified Communication Channels</h2>
+            <div class="links-flex">
+              <!-- AFTER (The fixed link) -->
+                <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">LinkedIn Profile ↗</a>
+                <a href="https://github.com/indira-priyadharshini" target="_blank" class="link-item">Review Code Repositories ↗</a>
+            </div>
+        </div>
+
+        <!-- Integrated Analytics Summary -->
+        <div class="card span-2">
+            <h2>Production Statistics & Performance</h2>
+            <div class="stats-box">
+                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="System Code Contribution Analytics">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Indira Priyadharshini T | Entry-Level Engineering Profile</p>
+    </footer>
+
+</div>
+
 </body>
 </html>
