@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini T | Professional Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/devicon/2.14.0/devicon.min.css">
-  <style>
+    <title>Indira Priyadharshini - Portfolio</title>
+    <style>
         :root {
             --bg-color: #0b0f19;
             --card-bg: #131929;
@@ -60,122 +58,27 @@
         .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         header p { font-size: 0.95rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
 
-        /* Grid Configuration */
-        .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
-
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; transition: transform 0.3s, border-color 0.3s; width: 100%; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word; }
-        .card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.2); }
-        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-
-        .tech-group { margin-bottom: 16px; width: 100%; }
-        .tech-group h3 { font-size: 0.85rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; word-wrap: break-word; overflow-wrap: break-word; }
-        .tech-group p { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
-
-        .icons-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; }
-        .icon-tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; font-size: 0.75rem; color: #e2e8f0; }
-
-        .timeline-item { border-left: 1px solid var(--border); padding-left: 12px; position: relative; margin-bottom: 16px; width: 100%; }
-        .timeline-item::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
-        .time { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); font-weight: bold; }
-        .job-title { font-weight: 600; font-size: 0.95rem; color: #ffffff; margin-top: 2px; }
-        .job-sub { font-size: 0.8rem; color: var(--primary); margin-bottom: 4px; }
-        .job-desc { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
-
-        /* Flexible Verification Link Layout */
-        .links-grid { display: flex; flex-direction: column; gap: 8px; width: 100%; }
-        .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 12px; border-radius: 100px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.8rem; transition: all 0.2s; min-width: 0; word-wrap: break-word; overflow-wrap: break-word; }
-        .link-item:hover { background: #ffffff; color: var(--bg-color); }
-
-        /* Clean Version Control Stats Box Layout - Both Mobile and Desktop */
-        .stats-box { 
-            background: #ffffff; 
-            padding: 16px; 
-            border-radius: 12px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; 
+        /* Style for the link's white background box (Global - Mobile & Desktop) */
+        #vcs-link-box {
+            background: #ffffff;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
             margin-top: 12px;
-            overflow-x: auto; 
-            -webkit-overflow-scrolling: touch;
-        }
-        .stats-box img { 
-            height: auto; 
-            max-width: 100%; 
-            min-width: 260px; 
-            display: block; 
+            margin-bottom: 24px;
         }
 
-        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
-
-        /* Screen upgrades for Tablets & Desktop */
-        @media (min-width: 768px) {
-            body { padding: 120px 24px 60px 24px; }
-            nav { flex-direction: row; justify-content: space-between; padding: 14px 28px; width: calc(100% - 40px); border-radius: 100px; gap: 0; }
-            .logo { font-size: 1.1rem; }
-            .nav-links { width: auto; gap: 24px; }
-            .nav-links a { font-size: 0.9rem; white-space: nowrap; }
-            header h1 { font-size: 3.2rem; }
-            .grid { grid-template-columns: 1.2fr 1fr; gap: 24px; }
-            .span-2 { grid-column: span 2; }
-            .card { padding: 36px; }
-            .card h2 { font-size: 1.3rem; }
-            .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-            .stats-box img { min-width: auto; }
-        }
-    </style><style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #131929;
-            --text-main: #f8fafc;
-            --text-muted: #64748b;
-            --primary: #38bdf8;
-            --accent: #818cf8;
-            --border: rgba(255, 255, 255, 0.04);
+        /* Makes the text link inside readable on the white background */
+        #vcs-link-box a {
+            color: #0b0f19 !important;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 180px 12px 40px 12px;
-            overflow-x: hidden;
+        #vcs-link-box a:hover {
+            color: var(--primary) !important;
         }
-
-        /* Anti-Spill Responsive Navbar Header */
-        nav {
-            position: fixed; top: 12px; left: 50%; transform: translateX(-50%); width: calc(100% - 24px); max-width: 1000px;
-            background: rgba(19, 25, 41, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border); padding: 12px; border-radius: 16px; 
-            display: flex; flex-direction: column; gap: 8px; align-items: center; z-index: 1000;
-        }
-        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; font-size: 0.95rem; }
-        .logo span { color: var(--primary); }
-        
-        .nav-links { 
-            display: flex; gap: 8px 12px; flex-wrap: wrap; justify-content: center; list-style: none; width: 100%; 
-        }
-        .nav-links li { display: inline-block; }
-        .nav-links a { 
-            color: var(--text-muted); text-decoration: none; font-size: 0.75rem; font-weight: 500; transition: color 0.2s; 
-            white-space: normal; text-align: center; display: inline-block;
-        }
-        .nav-links a:hover { color: var(--primary); }
-
-        .container { max-width: 1000px; margin: 0 auto; width: 100%; }
-        
-        .status-badge {
-            display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.15);
-            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 6px 12px; border-radius: 100px; margin-bottom: 20px; max-width: 100%;
-        }
-        .pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 8px var(--primary); flex-shrink: 0; }
-
-        header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; word-wrap: break-word; overflow-wrap: break-word; }
-        .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        header p { font-size: 0.95rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
 
         /* Grid Configuration */
         .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
@@ -233,113 +136,50 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#" class="logo">INDIRA <span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#technical-matrix">Technical Matrix</a></li>
+            <li><a href="#academic-qualifications">Academic Qualifications</a></li>
+            <li><a href="#professional-channels">Channels</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="status-badge">
+            <span class="pulse"></span> Actively Seeking Entry-Level Engagements
+        </div>
+        <header>
+            <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
+            <p>Detail-oriented graduate equipped with foundational knowledge in software development...</p>
+            
+            <!-- Beautiful White Background Box Container for your Link -->
+            <div id="vcs-link-box">
+                <a href="#version-control" class="vcs-link">View Version Control System ↗</a>
+            </div>
+        </header>
 
-<nav>
-    <a href="#" class="logo">INDIRA<span>.</span></a>
-    <ul class="nav-links">
-        <li><a href="#technical-matrix">Technical Matrix</a></li>
-        <li><a href="#academic-qualifications">Academic Qualifications</a></li>
-        <li><a href="#professional-channels">Channels</a></li>
-    </ul>
-</nav>
+        <div class="grid">
+            <!-- Version Control Card Block -->
+            <div class="card span-2" id="version-control">
+                <h2>Version Control System</h2>
+                <div class="stats-box">
+                    <img id="vcs-stats-img" src="YOUR_GITHUB_STATS_IMAGE_URL_HERE" alt="VCS Stats">
+                </div>
+            </div>
 
-<div class="container">
-    
-    <div class="status-badge">
-        <span class="pulse"></span> Actively Seeking Entry-Level Engagements
+            <!-- Deep Technical Capabilities Matrix -->
+            <div class="card" id="technical-matrix">
+                <h2>Technical Capabilities Matrix</h2>
+                <div class="tech-group">
+                    <h3>Data Engineering & Statistical Analysis</h3>
+                    <p>Structured implementation of data parsing, cleansing, and manipulation pipelines utilizing Python core libraries including Pandas and NumPy. Competent in exploratory data analysis and statistical reporting using data visualization frameworks such as Matplotlib and Seaborn.</p>
+                </div>
+                <div class="tech-group">
+                    <h3>Database Systems & Query Optimization</h3>
+                    <p>Proficient in relational schema engineering and database development lifecycle using MySQL. Capable of structuring optimized multi-table relational joints, subqueries, and precise constraints verification to maximize data access performance.</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <header>
-        <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
-        <p>Detail-oriented graduate equipped with foundational knowledge in data analytics and web development. Proficient in executing data profiling, statistical modeling, relational database query management, and designing performant, cross-browser compliant presentation layers using standard web technologies.</p>
-        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn">View Version Control System ↗</a>
-    </header>
-
-    <div class="grid">
-        <!-- Version Control Card Block -->
-        <div class="card span-2">
-            <h2>Version Control System</h2>
-            <div class="stats-box">
-                <img id="vcs-stats-img" src="YOUR_GITHUB_STATS_IMAGE_URL_HERE" alt="VCS Stats">
-            </div>
-        </div>
-        <!-- Deep Technical Capabilities Matrix -->
-        <div class="card" id="technical-matrix">
-            <h2>Technical Capabilities Matrix</h2>
-            
-            <div class="tech-group">
-                <h3>Data Engineering & Statistical Analysis</h3>
-                <p>Structured implementation of data parsing, cleansing, and manipulation pipelines utilizing Python core libraries including Pandas and NumPy. Competent in exploratory data analysis and statistical reporting using data visualization frameworks such as Matplotlib and Seaborn.</p>
-            </div>
-
-            <div class="tech-group">
-                <h3>Relational Database Architecture</h3>
-                <p>Writing and evaluating standardized relational database requests within MySQL and Oracle Database environments. Foundational understanding of data normalization, schema creation, transactional control statements, and standard indexing methodologies.</p>
-            </div>
-            
-            <div class="tech-group">
-                <h3>Semantic Presentation Layers</h3>
-                <p>Developing responsive, mobile-first web pages utilizing semantic HTML5 markup structures and advanced CSS3 layout methodologies (Flexbox and Grid systems). Functional understanding of script performance using basic asynchronous JavaScript paradigms and user flow UI prototyping inside Figma.</p>
-            </div>
-
-            <div class="icons-grid">
-                <div class="icon-tag"><i class="devicon-python-plain"></i> Python</div>
-                <div class="icon-tag"><i class="devicon-mysql-plain"></i> MySQL</div>
-                <div class="icon-tag"><i class="devicon-html5-plain"></i> HTML5</div>
-                <div class="icon-tag"><i class="devicon-css3-plain"></i> CSS3</div>
-                <div class="icon-tag"><i class="devicon-javascript-plain"></i> JavaScript</div>
-                <div class="icon-tag"><i class="devicon-oracle-original"></i> Oracle</div>
-            </div>
-        </div>
-
-        <!-- Rigorous Education and Training History -->
-        <div class="card" id="academic-qualifications">
-            <h2>Education & Technical Preparation</h2>
-            
-            <div class="timeline-item">
-                <div class="time">Academic Framework</div>
-                <div class="job-title">Exploratory Data Analysis Implementations</div>
-                <div class="job-desc">Constructing programmatic code to automate the ingestion of raw tabular datasets, handle structural missing values, neutralize outliers, and build interactive visualization graphs to identify statistical trends.</div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="time">Development Track</div>
-                <div class="job-title">Responsive UI Engineering Layouts</div>
-                <div class="job-desc">Designing fluid user interfaces matching modern responsive breakpoints, engineering semantic structural components for accessibility, and converting design prototypes into production-ready web assets.</div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="time">Database Track</div>
-                <div class="job-title">Relational Query Optimization</div>
-                <div class="job-desc">Structuring foundational entity-relationship schemas, writing performance-focused relational queries, and validating data integrity constraints across testing databases.</div>
-            </div>
-        </div>
-
-        <!-- Verified Communication Channels (No Forms) -->
-        <div class="card span-2" id="professional-channels">
-            <h2>Verified Communication Channels</h2>
-            <div class="links-flex">
-              <!-- AFTER (The fixed link) -->
-                <a href="https://www.linkedin.com/in/t-indira-priyadharshini-0b29463a8" target="_blank" class="link-item">LinkedIn Profile ↗</a>
-                <a href="https://github.com/indira-priyadharshini" target="_blank" class="link-item">Review Code Repositories ↗</a>
-            </div>
-        </div>
-
-        <!-- Integrated Analytics Summary -->
-        <div class="card span-2">
-            <h2>Production Statistics & Performance</h2>
-            <div class="stats-box">
-                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="System Code Contribution Analytics">
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Indira Priyadharshini T | Entry-Level Engineering Profile</p>
-    </footer>
-
-</div>
-
 </body>
 </html>
