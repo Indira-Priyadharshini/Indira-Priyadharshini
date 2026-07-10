@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indira Priyadharshini | Portfolio</title>
-    <!-- Google Fonts for Clean Premium Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Premium Geometric Sans-Serif Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: radial-gradient(at 0% 0%, #fdfbf7 0%, #f5f7fa 100%);
-            --card-bg: rgba(255, 255, 255, 0.85);
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --primary: #0284c7;      /* Bright Ocean Blue */
-            --accent: #4f46e5;       /* Royal Indigo */
-            --border: rgba(226, 232, 240, 0.8);
-            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
-            --glow: 0 20px 40px -15px rgba(79, 70, 229, 0.12);
+            --bg-color: #090e1a;       /* Deep Luxury Obsidian */
+            --card-bg: #111827;       /* Rich Midnight Navy */
+            --text-main: #f8fafc;     /* Crisp High-Contrast White */
+            --text-muted: #94a3b8;    /* Soft Slate Text */
+            --primary: #38bdf8;       /* Glowing Neon Cyan */
+            --accent: #818cf8;        /* Vivid Electric Indigo */
+            --border: rgba(51, 65, 85, 0.5);
+            --glow: 0 0 30px rgba(56, 189, 248, 0.15);
         }
 
         * {
@@ -27,138 +26,152 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg-gradient);
+            background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 60px 20px;
+            padding: 80px 20px;
             min-height: 100vh;
             position: relative;
+            overflow-x: hidden;
         }
 
-        /* Subtle modern grid overlay background */
-        body::before {
+        /* Noxfolio Ambient Glowing Background Orbs */
+        body::before, body::after {
             content: "";
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px), 
-                              linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
-            background-size: 30px 30px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(120px);
             z-index: -1;
+            opacity: 0.3;
             pointer-events: none;
+        }
+        body::before {
+            top: -100px;
+            right: -100px;
+            background: var(--primary);
+        }
+        body::after {
+            bottom: 100px;
+            left: -100px;
+            background: var(--accent);
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        /* Live Status Pill */
+        /* Availability Badge */
         .status-pill {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            color: #166534;
-            font-size: 0.8rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            font-size: 0.75rem;
             font-weight: 700;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 9999px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
         }
 
         .status-pulse {
             width: 8px;
             height: 8px;
-            background-color: #22c55e;
+            background-color: #10b981;
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
-        /* Header Intro */
+        /* Hero Text Styles */
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            letter-spacing: -0.04em;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         header p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            max-width: 750px;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin-bottom: 36px;
+            font-weight: 400;
         }
 
-        /* Modern Split Grid Layout for Content */
+        /* Modern Grid Layout */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 24px;
-            margin-top: 20px;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         @media (min-width: 768px) {
             .portfolio-grid {
-                grid-template-columns: 1.4fr 1fr; /* Asymmetric balance layout */
+                grid-template-columns: 1.3fr 1fr;
             }
             .full-width {
                 grid-column: span 2;
             }
         }
 
-        /* Glassmorphism Cards */
+        /* Premium Noxfolio Container Cards */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(8px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(79, 70, 229, 0.2);
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
             box-shadow: var(--glow);
         }
 
         .card h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--text-main);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            color: #ffffff;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        /* Tech Lists */
+        /* Tech Stack Inner Items */
         .stack-item {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 18px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin-bottom: 16px;
         }
 
         .stack-item strong {
-            color: var(--accent);
+            color: var(--primary);
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            font-size: 1rem;
             font-weight: 600;
         }
 
@@ -167,71 +180,66 @@
             font-size: 0.95rem;
         }
 
-        /* Focus points list styling */
+        /* Bullet Points Override */
         .focus-list {
             list-style: none;
         }
 
         .focus-list li {
             position: relative;
-            padding-left: 28px;
-            margin-bottom: 16px;
+            padding-left: 32px;
+            margin-bottom: 20px;
             color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         .focus-list li::before {
-            content: "✓";
+            content: "→";
             position: absolute;
             left: 0;
-            top: 2px;
-            width: 18px;
-            height: 18px;
-            background: #e0e7ff;
+            top: 0;
             color: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
             font-weight: 700;
+            font-size: 1.1rem;
         }
 
-        /* Primary Call To Action Button */
+        /* Neon Accent Call To Action */
         .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
+            color: #090e1a;
             text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
-            transition: all 0.2s ease;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
-            opacity: 0.95;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.6);
+            filter: brightness(1.1);
         }
 
-        /* Modern Social Buttons */
+        /* Dynamic Social Rows */
         .social-flex {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .social-btn {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 14px 20px;
-            background: #ffffff;
+            gap: 14px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 16px;
             text-decoration: none;
             color: var(--text-main);
             font-weight: 600;
@@ -239,31 +247,39 @@
         }
 
         .social-btn:hover {
-            background: var(--text-main);
-            color: #ffffff;
-            border-color: var(--text-main);
+            background: #ffffff;
+            color: #090e1a;
+            border-color: #ffffff;
         }
 
-        /* Image Containers */
+        /* Aligning original shields.io badges */
         .badge-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 10px;
+            margin-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
         }
 
         .badge-grid img {
-            height: 28px;
-            border-radius: 4px;
+            height: 32px;
+            border-radius: 6px;
+            transition: transform 0.2s;
         }
 
+        .badge-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Clean wrapper for Github Panels */
         .stats-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #ffffff;
-            padding: 15px;
-            border-radius: 14px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 24px;
+            border-radius: 18px;
             border: 1px solid var(--border);
         }
 
@@ -274,11 +290,11 @@
 
         footer {
             text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
+            margin-top: 80px;
+            padding-top: 30px;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -287,89 +303,90 @@
 <div class="container">
     
     <div class="status-pill">
-        <span class="status-pulse"></span> Available For Projects
+        <span class="status-pulse"></span> Open to Roles & Projects
     </div>
 
     <header>
-        <h1>Hi there! I'm Indira Priyadharshini T 👋</h1>
-        <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end development.</p>
+        <h1>Hi, I'm Indira Priyadharshini T 👋</h1>
+        <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end web layout systems.</p>
         <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Explore GitHub Profile ↗</a>
     </header>
 
     <div class="portfolio-grid">
         
-        <!-- Left Side: Tech Stack info -->
+        <!-- Left Column: Professional Capabilities -->
         <div class="card">
-            <h2>🛠 Tech Stack</h2>
+            <h2>🛠 Technical Toolkit</h2>
+            
             <div class="stack-item">
                 <strong>Data Analysis</strong>
                 <span>Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.</span>
             </div>
+            
             <div class="stack-item">
                 <strong>Web Development</strong>
-                <span>HTML, CSS, JavaScript, and UI design.</span>
+                <span>HTML, CSS, JavaScript, and Modern UI/UX Architecture.</span>
             </div>
+            
             <div class="stack-item">
                 <strong>Machine Learning</strong>
-                <span>Scikit-learn (Building predictive models).</span>
+                <span>Scikit-learn (Building and evaluation of predictive models).</span>
             </div>
 
-            <!-- GitHub Shield Badges Alignment -->
+            <!-- Complete Verified Technical Badges System -->
             <div class="badge-grid">
-                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-<img src="https://img.shields.io/badge/oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
-<img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/matplotlib-%23ffffff.svg?style=for-the-badge&logo=matplotlib&logoColor=black" alt="Matplotlib">
-<img src="https://img.shields.io/badge/seaborn-%234E7297.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
-<img src="https://img.shields.io/badge/power_bi-%23F2C811.svg?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
-                <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
                 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
                 <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
                 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
                 <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                <img src="https://img.shields.io/badge/oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
+                <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+                <img src="https://img.shields.io/badge/matplotlib-%23ffffff.svg?style=for-the-badge&logo=matplotlib&logoColor=black" alt="Matplotlib">
+                <img src="https://img.shields.io/badge/seaborn-%234E7297.svg?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
+                <img src="https://img.shields.io/badge/power_bi-%23F2C811.svg?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
             </div>
         </div>
 
-        <!-- Right Side: Focus & Social Connections -->
-        <div class="social-column" style="display: flex; flex-direction: column; gap: 24px;">
+        <!-- Right Column: Focus Areas & Digital Channels -->
+        <div style="display: flex; flex-direction: column; gap: 30px;">
             
             <div class="card" style="flex: 1;">
-                <h2>📈 Current Focus</h2>
+                <h2>📈 Strategic Focus</h2>
                 <ul class="focus-list">
-                    <li>Optimizing core data pipelines to extract actionable insights.</li>
-                    <li>Creating responsive, highly interactive frontend applications.</li>
-                    <li>Improving proficiency in end-to-end full-stack development.</li>
+                    <li>Designing core analytical pipelines to parse complex datasets.</li>
+                    <li>Structuring fast, interface-focused client web applications.</li>
+                    <li>Expanding methodologies across statistical predictive computing.</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>🌐 Connect With Me</h2>
+                <h2>🌐 Professional Networks</h2>
                 <div class="social-flex">
-                    <a href="https://linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank" class="social-btn">
-                        <span>💼</span> LinkedIn Profile
+                    <a href="https://linkedin.com/in/indira-priyadharshini" target="_blank" class="social-btn">
+                        <span>💼</span> Connect on LinkedIn
                     </a>
-                    <a href="mailto:your-email@example.com" class="social-btn">
-                        <span>✉️</span> Send an Email
+                    <a href="mailto:indhuthiruselvam@gmail.com" class="social-btn">
+                        <span>✉️</span> Direct Email Inquiry
                     </a>
                 </div>
             </div>
 
         </div>
 
-        <!-- Full Width Footer Card: GitHub Metrics -->
-       <!-- Full Width Footer Card: GitHub Metrics -->
+        <!-- Full Layout Footer Panel: Automated Github Metrics -->
         <div class="card full-width">
-            <h2>📊 GitHub Activity Stats</h2>
+            <h2>📊 Production Activity Profile</h2>
             <div class="stats-wrapper">
-                <!-- Connected dynamic github stats panel -->
-                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=default" alt="Indira's GitHub Stats">
+                <!-- Spaceless, accurate lowercase user identifier query execution -->
+                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="Indira's Development Metrics">
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>© 2026 Indira Priyadharshini. Optimized with an elegant, responsive light interface.</p>
+        <p>© 2026 Indira Priyadharshini. Inspired by high-end engineering interfaces.</p>
     </footer>
 
 </div>
