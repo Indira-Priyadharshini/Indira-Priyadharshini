@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indira Priyadharshini | Portfolio</title>
-    <!-- Premium Geometric Sans-Serif Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Indira Priyadharshini | Premium Portfolio</title>
+    <!-- Premium Cyberpunk & Minimalist Sans-Serif Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #090e1a;       /* Deep Luxury Obsidian */
-            --card-bg: #111827;       /* Rich Midnight Navy */
-            --text-main: #f8fafc;     /* Crisp High-Contrast White */
-            --text-muted: #94a3b8;    /* Soft Slate Text */
-            --primary: #38bdf8;       /* Glowing Neon Cyan */
-            --accent: #818cf8;        /* Vivid Electric Indigo */
-            --border: rgba(51, 65, 85, 0.5);
-            --glow: 0 0 30px rgba(56, 189, 248, 0.15);
+            --bg-color: #0b0f19;       /* Deep Nebula Obsidian */
+            --card-bg: rgba(17, 24, 39, 0.7); /* Translucent Midnight Blue */
+            --text-main: #f8fafc;     /* Clean Snow White */
+            --text-muted: #94a3b8;    /* Soft Space Gray */
+            --primary: #38bdf8;       /* Electric Cyan Neon */
+            --accent: #6366f1;        /* Cosmic Violet Indigo */
+            --border: rgba(255, 255, 255, 0.08);
+            --glow: 0 0 40px rgba(56, 189, 248, 0.25);
         }
 
         * {
@@ -24,219 +24,237 @@
             padding: 0;
         }
 
+        /* Premium Text Selection Glow */
+        ::selection {
+            background: rgba(56, 189, 248, 0.3);
+            color: #ffffff;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 80px 20px;
+            padding: 100px 20px;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Noxfolio Ambient Glowing Background Orbs */
-        body::before, body::after {
-            content: "";
+        /* Animated Mesh Glow Background */
+        .ambient-glow {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 600px;
+            height: 600px;
             border-radius: 50%;
-            filter: blur(120px);
-            z-index: -1;
-            opacity: 0.3;
-            pointer-events: none;
-        }
-        body::before {
-            top: -100px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+            top: -200px;
             right: -100px;
-            background: var(--primary);
+            z-index: -1;
+            animation: floatGlow 12s infinite alternate ease-in-out;
         }
-        body::after {
-            bottom: 100px;
+        
+        .ambient-glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+            bottom: -100px;
             left: -100px;
-            background: var(--accent);
+            z-index: -1;
+            animation: floatGlow 16s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 40px) scale(1.15); }
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: 0 auto;
         }
 
-        /* Availability Badge */
+        /* Premium Pulsing Header Badge */
         .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #34d399;
+            gap: 10px;
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.75rem;
-            font-weight: 700;
-            padding: 8px 16px;
-            border-radius: 9999px;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+            font-weight: 500;
+            padding: 8px 18px;
+            border-radius: 100px;
+            margin-bottom: 30px;
+            letter-spacing: 0.05em;
         }
 
         .status-pulse {
-            width: 8px;
-            height: 8px;
-            background-color: #10b981;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary);
             border-radius: 50%;
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 10px var(--primary);
         }
 
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
-
-        /* Hero Text Styles */
+        /* Typography & Header styling */
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
             letter-spacing: -0.04em;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%);
+            line-height: 1.15;
+            background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 800px;
-            margin-bottom: 36px;
-            font-weight: 400;
+            max-width: 850px;
+            margin-bottom: 40px;
         }
 
-        /* Modern Grid Layout */
+        /* Complex Grid Blueprint */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
-            margin-top: 40px;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 850px) {
             .portfolio-grid {
-                grid-template-columns: 1.3fr 1fr;
+                grid-template-columns: 1.5fr 1fr;
             }
             .full-width {
                 grid-column: span 2;
             }
         }
 
-        /* Premium Noxfolio Container Cards */
+        /* Glassmorphism Master Cards */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 40px;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 45px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-6px) scale(1.005);
+            border-color: rgba(56, 189, 248, 0.3);
             box-shadow: var(--glow);
         }
 
         .card h2 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
             letter-spacing: -0.02em;
-            color: #ffffff;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        /* Tech Stack Inner Items */
-        .stack-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 18px 22px;
-            margin-bottom: 16px;
+        /* Skill Meter Bars */
+        .skill-group {
+            margin-bottom: 24px;
         }
 
-        .stack-item strong {
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .skill-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .skill-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .meter-bg {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            border-radius: 10px;
+            width: 0%;
+            transition: width 1.5s ease-out;
+        }
+
+        /* Focus points clean layouts */
+        .focus-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .focus-icon {
+            font-family: 'JetBrains Mono', monospace;
             color: var(--primary);
-            display: block;
-            margin-bottom: 6px;
-            font-size: 1rem;
             font-weight: 600;
         }
 
-        .stack-item span {
+        .focus-text h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .focus-text p {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
 
-        /* Bullet Points Override */
-        .focus-list {
-            list-style: none;
-        }
-
-        .focus-list li {
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
-        .focus-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        /* Neon Accent Call To Action */
+        /* Fluid CTA buttons */
         .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #090e1a;
+            gap: 12px;
+            background: #ffffff;
+            color: #0b0f19;
             text-decoration: none;
-            padding: 16px 32px;
-            border-radius: 14px;
+            padding: 18px 36px;
+            border-radius: 16px;
             font-weight: 700;
             font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .btn-primary:hover {
+            background: var(--primary);
+            color: #0b0f19;
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.6);
-            filter: brightness(1.1);
+            box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.4);
         }
 
-        /* Dynamic Social Rows */
-        .social-flex {
+        /* Modern Interactive Links */
+        .social-link {
             display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .social-btn {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 14px;
-            padding: 16px 24px;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -246,40 +264,50 @@
             transition: all 0.2s ease;
         }
 
-        .social-btn:hover {
-            background: #ffffff;
-            color: #090e1a;
-            border-color: #ffffff;
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary);
+            padding-left: 24px;
         }
 
-        /* Aligning original shields.io badges */
+        .social-link span.arrow {
+            color: var(--primary);
+            transition: transform 0.2s;
+        }
+
+        .social-link:hover span.arrow {
+            transform: translateX(4px);
+        }
+
+        /* Skill badging alignment matrix */
         .badge-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 24px;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .badge-grid img {
-            height: 32px;
-            border-radius: 6px;
-            transition: transform 0.2s;
+            height: 28px;
+            border-radius: 4px;
+            opacity: 0.85;
+            transition: all 0.2s;
         }
 
         .badge-grid img:hover {
-            transform: scale(1.05);
+            opacity: 1;
+            transform: translateY(-2px);
         }
 
-        /* Clean wrapper for Github Panels */
+        /* Production stats card styling */
         .stats-wrapper {
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 24px;
-            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 20px;
             border: 1px solid var(--border);
         }
 
@@ -290,50 +318,63 @@
 
         footer {
             text-align: center;
-            margin-top: 80px;
-            padding-top: 30px;
+            margin-top: 100px;
+            padding-top: 40px;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
+<div class="ambient-glow"></div>
+<div class="ambient-glow-2"></div>
+
 <div class="container">
     
     <div class="status-pill">
-        <span class="status-pulse"></span> Open to Roles & Projects
+        <span class="status-pulse"></span> SYSTEM STATUS: OPEN FOR OFFERS
     </div>
 
     <header>
-        <h1>Hi, I'm Indira Priyadharshini T 👋</h1>
-        <p>I am a dedicated Data Analyst and Web Developer passionate about building data-driven solutions and responsive user interfaces. I enjoy solving complex problems by combining technical precision in data manipulation with creative front-end web layout systems.</p>
-        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Explore GitHub Profile ↗</a>
+        <h1>Indira Priyadharshini</h1>
+        <p>A precision-driven Data Analyst and Web Developer bridging the gap between structural data computing and creative frontend presentation layers. Expert at translating data pipelines into high-fidelity functional user systems.</p>
+        <a href="https://github.com/indira-priyadharshini" target="_blank" class="btn-primary">Connect on GitHub ↗</a>
     </header>
 
     <div class="portfolio-grid">
         
-        <!-- Left Column: Professional Capabilities -->
+        <!-- Left Master Card: Technical Architecture -->
         <div class="card">
             <h2>🛠 Technical Toolkit</h2>
             
-            <div class="stack-item">
-                <strong>Data Analysis</strong>
-                <span>Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Excel.</span>
+            <div class="skill-group">
+                <div class="skill-header">
+                    <span class="skill-title">Data Analysis & Pipelines</span>
+                </div>
+                <div class="skill-desc">Python (NumPy, Pandas, Seaborn, Matplotlib), SQL, Power BI, Advanced Excel.</div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 92%;"></div></div>
             </div>
             
-            <div class="stack-item">
-                <strong>Web Development</strong>
-                <span>HTML, CSS, JavaScript, and Modern UI/UX Architecture.</span>
+            <div class="skill-group">
+                <div class="skill-header">
+                    <span class="skill-title">Web Interfaces & Design</span>
+                </div>
+                <div class="skill-desc">HTML5, CSS3 Layouts, Modern Responsive JS, UI/UX Prototyping.</div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 88%;"></div></div>
             </div>
             
-            <div class="stack-item">
-                <strong>Machine Learning</strong>
-                <span>Scikit-learn (Building and evaluation of predictive models).</span>
+            <div class="skill-group">
+                <div class="skill-header">
+                    <span class="skill-title">Machine Learning Systems</span>
+                </div>
+                <div class="skill-desc">Scikit-learn architectures, data predictive analytics & validation models.</div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 80%;"></div></div>
             </div>
 
-            <!-- Complete Verified Technical Badges System -->
+            <!-- Fully loaded visual badges layout -->
             <div class="badge-grid">
                 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
                 <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
@@ -348,45 +389,65 @@
             </div>
         </div>
 
-        <!-- Right Column: Focus Areas & Digital Channels -->
+        <!-- Right Side Column: Strategic Objectives & Directory links -->
         <div style="display: flex; flex-direction: column; gap: 30px;">
             
             <div class="card" style="flex: 1;">
-                <h2>📈 Strategic Focus</h2>
-                <ul class="focus-list">
-                    <li>Designing core analytical pipelines to parse complex datasets.</li>
-                    <li>Structuring fast, interface-focused client web applications.</li>
-                    <li>Expanding methodologies across statistical predictive computing.</li>
-                </ul>
+                <h2>📈 Focus Metrics</h2>
+                
+                <div class="focus-item">
+                    <span class="focus-icon">// 01</span>
+                    <div class="focus-text">
+                        <h3>Data Pipeline Optimization</h3>
+                        <p>Refining processing logic to structure raw datasets into clean insights.</p>
+                    </div>
+                </div>
+                
+                <div class="focus-item">
+                    <span class="focus-icon">// 02</span>
+                    <div class="focus-text">
+                        <h3>Modern Interface Design</h3>
+                        <p>Constructing elegant frontends using clean structural code blueprints.</p>
+                    </div>
+                </div>
+                
+                <div class="focus-item">
+                    <span class="focus-icon">// 03</span>
+                    <div class="focus-text">
+                        <h3>Statistical Modelling</h3>
+                        <p>Advancing modeling workflows across multi-variable data distributions.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
-                <h2>🌐 Professional Networks</h2>
+                <h2>🌐 Network Channels</h2>
                 <div class="social-flex">
-                    <a href="https://linkedin.com/in/indira-priyadharshini" target="_blank" class="social-btn">
-                        <span>💼</span> Connect on LinkedIn
+                    <a href="https://linkedin.com/in/indira-priyadharshini" target="_blank" class="social-link">
+                        <span>💼 LinkedIn Connection</span>
+                        <span class="arrow">→</span>
                     </a>
-                    <a href="mailto:indhuthiruselvam@gmail.com" class="social-btn">
-                        <span>✉️</span> Direct Email Inquiry
+                    <a href="mailto:indhuthiruselvam@gmail.com" class="social-link">
+                        <span>✉️ Direct Email Wire</span>
+                        <span class="arrow">→</span>
                     </a>
                 </div>
             </div>
 
         </div>
 
-        <!-- Full Layout Footer Panel: Automated Github Metrics -->
+        <!-- Extended Dashboard Frame: Realtime GitHub telemetry data -->
         <div class="card full-width">
-            <h2>📊 Production Activity Profile</h2>
+            <h2>📊 Core Repository Telemetry</h2>
             <div class="stats-wrapper">
-                <!-- Spaceless, accurate lowercase user identifier query execution -->
-                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="Indira's Development Metrics">
+                <img src="https://github-readme-stats.vercel.app/api?username=indira-priyadharshini&show_icons=true&theme=dark" alt="Indira's Performance Metrics">
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>© 2026 Indira Priyadharshini. Inspired by high-end engineering interfaces.</p>
+        <p>// BUILT USING PREMIUM AMBIENT GLASSMORPHISM CORE CONFIGS // 2026</p>
     </footer>
 
 </div>
