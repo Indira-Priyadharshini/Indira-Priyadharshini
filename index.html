@@ -58,25 +58,6 @@
         .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         header p { font-size: 0.95rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
 
-        /* Dedicated container for the link with a white background */
-        #vcs-link-box {
-            background: #ffffff;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 8px;
-            margin-top: 12px;
-            margin-bottom: 24px;
-        }
-        #vcs-link-box a {
-            color: #0b0f19 !important;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-        #vcs-link-box a:hover {
-            color: var(--primary) !important;
-        }
-
         /* Grid Configuration */
         .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
 
@@ -148,11 +129,7 @@
         <header>
             <h1><span class="gradient-text">Indira Priyadharshini T</span></h1>
             <p>Detail-oriented graduate equipped with foundational knowledge in data analytics and web development. Proficient in executing data profiling, statistical modeling, relational database query management, and designing performant, cross-browser compliant presentation layers using standard web technologies.</p>
-            
-            <!-- Styled White Background Container Box -->
-            <div id="vcs-link-box">
-                <a href="#version-control" class="vcs-link">View Version Control System ↗</a>
-            </div>
+            <a href="#version-control" class="vcs-link" style="color: var(--primary); text-decoration: none;">View Version Control System ↗</a>
         </header>
 
         <div class="grid">
