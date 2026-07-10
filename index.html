@@ -1,124 +1,88 @@
-<title>Indira Priyadharshini T | Professional Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/devicon/2.14.0/devicon.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Priyadharshini T | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/devicon/2.14.0/devicon.min.css">
     <style>
-   <style>
-:root {
---bg-color: #0b0f19;
---card-bg: #131929;
-@@ -23,66 +23,79 @@
-background-color: var(--bg-color);
-color: var(--text-main);
-line-height: 1.6;
-            padding: 120px 20px 60px 20px;
-            padding: 100px 16px 40px 16px;
-            overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
-}
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131929;
+            --primary: #38bdf8;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+            --accent: #38bdf8;
+        }
 
-nav {
-            position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 40px); max-width: 1000px;
-            background: rgba(19, 25, 41, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border); padding: 14px 28px; border-radius: 100px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 100px 16px 40px 16px;
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+        }
+
+        nav {
             position: fixed; top: 16px; left: 50%; transform: translateX(-50%); width: calc(100% - 32px); max-width: 1000px;
             background: rgba(19, 25, 41, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border); padding: 12px 20px; border-radius: 100px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
-}
-        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; }
+        }
+
         .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #ffffff; text-decoration: none; font-size: 1rem; }
-.logo span { color: var(--primary); }
-        .nav-links { display: flex; gap: 24px; list-style: none; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .logo span { color: var(--primary); }
         .nav-links { display: flex; gap: 16px; list-style: none; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; white-space: nowrap; }
-.nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover { color: var(--primary); }
 
-        .container { max-width: 1000px; margin: 0 auto; }
         .container { max-width: 1000px; margin: 0 auto; width: 100%; }
 
-.status-badge {
-display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.15);
-            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
-            color: var(--primary); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; max-width: 100%;
-}
-        .pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 8px var(--primary); }
-        .pulse { width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%; box-shadow: 0 0 8px var(--primary); flex-shrink: 0; }
-
-        header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
-        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; word-wrap: break-word; }
-.gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        header p { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin-bottom: 32px; text-align: justify; }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
+        .gradient-text { background: linear-gradient(135deg, #ffffff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         header p { font-size: 1rem; color: var(--text-muted); max-width: 850px; margin-bottom: 24px; text-align: justify; }
 
-        .grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: 1.2fr 1fr; }
-            .span-2 { grid-column: span 2; }
-        }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; width: 100%; }
-
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 36px; transition: transform 0.3s, border-color 0.3s; }
-        .card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.2); }
-        .card h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 24px; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; transition: transform 0.3s, border-color 0.3s; width: 100%; overflow: hidden; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; transition: transform 0.3s; }
         .card:hover { transform: translateY(-2px); border-color: rgba(56, 189, 248, 0.2); }
         .card h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
 
-        .tech-group { margin-bottom: 24px; }
-        .tech-group h3 { font-size: 0.95rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
-        .tech-group p { color: var(--text-muted); font-size: 0.95rem; text-align: justify; }
-        .tech-group { margin-bottom: 20px; }
-        .tech-group h3 { font-size: 0.9rem; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
-        .tech-group p { color: var(--text-muted); font-size: 0.9rem; text-align: justify; }
-
-        .icons-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
-        .icon-tag { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 8px 14px; border-radius: 10px; font-size: 0.85rem; color: #e2e8f0; }
-        .icons-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
-        .icon-tag { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; color: #e2e8f0; }
-
-        .timeline-item { border-left: 1px solid var(--border); padding-left: 16px; position: relative; margin-bottom: 24px; }
-        .timeline-item { border-left: 1px solid var(--border); padding-left: 14px; position: relative; margin-bottom: 20px; }
-.timeline-item::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
-.time { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); font-weight: bold; }
-        .job-title { font-weight: 600; font-size: 1.05rem; color: #ffffff; margin-top: 2px; }
-        .job-desc { color: var(--text-muted); font-size: 0.9rem; text-align: justify; margin-top: 4px; }
-        .job-title { font-weight: 600; font-size: 1rem; color: #ffffff; margin-top: 2px; }
-        .job-sub { font-size: 0.85rem; color: var(--primary); margin-bottom: 4px; }
-        .job-desc { color: var(--text-muted); font-size: 0.85rem; text-align: justify; }
-
-        .btn { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: var(--bg-color); text-decoration: none; padding: 12px 24px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
-        .btn:hover { background: var(--primary); }
-        .links-grid { display: grid; grid-template-columns: 1fr; gap: 12px; width: 100%; }
-        .link-item { text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 14px; border-radius: 10px; text-decoration: none; color: #ffffff; font-weight: 500; font-size: 0.85rem; transition: all 0.2s; }
-        .link-item:hover { background: #ffffff; color: var(--bg-color); }
-
-        .stats-box { background: rgba(0,0,0,0.15); border: 1px solid var(--border); padding: 20px; border-radius: 14px; text-align: center; }
-        .stats-box img { max-width: 100%; height: auto; }
-        .stats-box { background: rgba(0,0,0,0.15); border: 1px solid var(--border); padding: 16px; border-radius: 12px; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%; }
-        .stats-box img { max-width: 100%; height: auto; display: block; }
-
-        .links-flex { display: flex; gap: 16px; }
-        .link-item { flex: 1; text-align: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 16px; border-radius: 12px; text-decoration: none; color: #ffffff; font-weight: 500; transition: all 0.2s; }
-        .link-item:hover { background: #ffffff; color: var(--bg-color); }
-        footer { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
-
         footer { text-align: center; margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
-        /* Media Queries for Tablet and Desktop scaling */
-        @media (min-width: 480px) {
-            .links-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        @media (min-width: 768px) {
-            body { padding: 120px 24px 60px 24px; }
-            nav { padding: 14px 28px; width: calc(100% - 40px); }
-            .logo { font-size: 1.1rem; }
-            .nav-links { gap: 24px; }
-            .nav-links a { font-size: 0.9rem; }
-            header h1 { font-size: 3.2rem; }
-            .grid { grid-template-columns: 1.2fr 1fr; gap: 24px; }
-            .span-2 { grid-column: span 2; }
-            .card { padding: 36px; }
-            .card h2 { font-size: 1.3rem; }
-        }
-</style>
+    </style>
 </head>
 <body>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Indira<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Hi, I'm <span class="gradient-text">Indira Priyadharshini T</span></h1>
+            <p>Welcome to my professional portfolio. I specialize in front-end development and modern web technologies.</p>
+        </header>
+
+        <section class="grid">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>Passionate about building clean, efficient, and responsive web experiences.</p>
+            </div>
+            <div class="card">
+                <h2>Skills</h2>
+                <p>Proficient in HTML, CSS, JavaScript, and modern frameworks.</p>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 Indira Priyadharshini T
+        </footer>
+    </div>
+</body>
+</html>
