@@ -3,7 +3,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/Objective-Python%20Developer-38bdf8?style=for-the-badge" alt="Target Role"/>
   <img src="https://img.shields.io/badge/Education-B.E.%20EEE%20%7C%20CGPA%208.5-818cf8?style=for-the-badge" alt="Academic Background"/>
-  <img src="https://img.shields.io/badge/Domain-Banking%20%26%20Data%20Analytics-34d399?style=for-the-badge" alt="Domain Exposure"/>
+  
 </p>
 
 Python & SQL Developer with 1 year of experience in Python, SQL, and relational databases. Skilled
