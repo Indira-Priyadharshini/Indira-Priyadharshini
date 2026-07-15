@@ -40,22 +40,22 @@ An electrical engineering graduate and trained technical specialist with structu
 
 ## 🔬 Technical Internship & Engineering Deployments
 
-### 🎓 Advanced Data Analytics Framework — QSpiders
-* Executed systematic training focused on combining Python scripting with underlying SQL engines for advanced pipeline analytics.
-* Developed custom data transformations to parse, clean, and map multi-source tabular configurations into consolidated environments.
+Customer Segmentation & Behavior Analysis Project | Python & SQL
+•	Extracted and processed customer transaction data using SQL (Joins, CTEs, Aggregations)
+•	Performed data cleaning and transformation using Python (Pandas, NumPy)
+•	Segmented customers based on spending patterns, purchase frequency, and engagement levels
+•	Identified key customer groups to support targeted marketing and business decisions
+Banking Transaction & Account Analysis System | Python & SQL
+•	Designed and managed a banking database using SQL (Joins, Constraints, Aggregations, Subqueries)
+•	Analyzed customer transactions including deposits, withdrawals, and transfers
+•	Used Python (Pandas) for data preprocessing and behavioral trend analysis
+•	Generated insights on account activity patterns and monthly banking performance
+Fraud Detection & Financial Risk Analysis Project | Python & SQL
+•	Built a structured financial dataset using SQL for data extraction and relationship management
+•	Performed data cleaning and feature analysis using Python (Pandas, NumPy)
+•	Analyzed transaction patterns to detect anomalies and suspicious activities
+•	Identified potential fraudulent behavior and high-risk accounts using data-driven insights
 
-### 🍕 Pizza Sales Performance Dashboard (Power BI, DAX)
-* Engineered an interactive performance tracking interface evaluating key commercial metrics and consumer purchase habits.
-* Authored custom DAX calculations to isolate high-value metrics including Total Revenue and Average Order Value ($AOV$).
-* Integrated multi-layered dynamic slicers and timeline charts to isolate temporal trends across daily and monthly sales intervals.
-
-### 🛒 Blinkit operational Analytics Matrix (Power BI, Excel)
-* Configured a centralized reporting layout monitoring granular sales metrics across distinct product lines, categories, and retail fulfillment centers.
-* Formulated custom analytical expressions to model average sales velocities and normalized consumer rating indexes.
-
-### ⚡ Automated Sanitary Napkin Incinerator — EEE Capstone Project
-* Architected physical control circuit layouts and hardware control loops to enforce safe automated operating tolerances.
-* Programmed the core automation sequence, sensor inputs, and thermal processing cycles using Python scripts.
 
 ---
 
