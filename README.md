@@ -41,7 +41,7 @@ optimization, and problem-solving with a passion for continuous learning.
 
 ---
 
-## 🔬 Technical Internship & Engineering Deployments
+## 🔬 Technical Projects & Engineering Deployments
 
 ### Customer Segmentation & Behavior Analysis Project | Python & SQL
 *	Extracted and processed customer transaction data using SQL (Joins, CTEs, Aggregations)
