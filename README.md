@@ -6,7 +6,10 @@
   <img src="https://img.shields.io/badge/Domain-Banking%20%26%20Data%20Analytics-34d399?style=for-the-badge" alt="Domain Exposure"/>
 </p>
 
-An electrical engineering graduate and trained technical specialist with structured domain experience in financial services and advanced data analytics. Proven competency in programmatic data cleaning, relational query execution, and business intelligence reporting. Seeking an entry-level position to design scalable data models and extract actionable business insights.
+Python & SQL Developer with 1 year of experience in Python, SQL, and relational databases. Skilled
+in developing real-world projects, automation, and data processing. Strong knowledge of OOPS, SQL
+optimization, and problem-solving with a passion for continuous learning.
+
 
 ---
 
